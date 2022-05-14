@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpanishRootComponent } from './spanish-root/spanish-root.component';
+import { DataLoadComponent } from './data-load/data-load.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SpanishRootComponent
+    SpanishRootComponent,
+    DataLoadComponent
   ],
   imports: [
     BrowserModule,
