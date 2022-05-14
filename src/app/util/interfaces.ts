@@ -1,9 +1,9 @@
-interface Lesson {
+export interface Lesson {
   num: number
   sentences: Array<SentencePair>
 }
 
-interface SentencePair {
+export interface SentencePair {
   en: string
   es: string
 }

@@ -1,0 +1,19 @@
+
+
+<div class="flex flex-col h-screen">
+  <input id="preview" type="file" (change)="loadFile($event)" />
+
+  <pre class="
+    font-mono
+    max-h-96
+    overflow-y-auto
+  ">{{fullText}}
+  </pre>
+
+  <pre class="
+    font-mono
+    max-h-96
+    overflow-y-auto
+  ">{{logText}}
+  </pre>
+</div>
