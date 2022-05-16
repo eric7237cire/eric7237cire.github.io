@@ -3,6 +3,7 @@ import {verboseRegExp} from "../util/misc";
 import {LoggerService} from "../services/logger.service";
 import {Subject, takeUntil} from "rxjs";
 import {Lesson} from "../util/interfaces";
+import {StorageService} from "../services/storage.service";
 
 const LOCAL_STORAGE_KEY = "fullText";
 
@@ -37,9 +38,11 @@ export class DataLoadComponent implements OnInit {
   fullText: string = "";
   logText: string = "";
 
+  lessons: Array<Lesson> = [];
+
   private unsubscribe = new Subject<void>();
 
-  constructor(private logService: LoggerService) { }
+  constructor(private logService: LoggerService, private storageService: StorageService) { }
 
   ngOnDestroy() {
         this.unsubscribe.next();
@@ -64,24 +67,29 @@ export class DataLoadComponent implements OnInit {
     );
   }
 
+  async storeInIndexDb() {
+    await this.storageService.ensureCreated();
+    await this.storageService.storeLessons(this.lessons);
+  }
+
   private parseText() {
     const lines = this.fullText.split("\n");
     let match;
 
-    const lessons : Array<Lesson> = [];
+    this.lessons = [];
 
     for(const line of lines) {
       if ( (match = line.match(LESSON_REGEX)) !== null ) {
         const lessonNumber = parseInt( match.groups!["lessonNumber"] );
         this.logService.logMessage(`Match!  ${line} Lesson -- ${lessonNumber} `);
 
-        lessons.push( {
+        this.lessons.push( {
           num: lessonNumber, sentences: []
         })
         //this.logService.logMessage(`Match!  ${line}  ${match.groups![1]}`);
       }
       else if ( (match = line.match(SENTENCE_REGEX)) !== null ) {
-        const lesson = lessons[lessons.length-1];
+        const lesson = this.lessons[this.lessons.length-1];
         const sentenceNumber = parseInt(match.groups!["sentenceNumber"]);
         const sentenceContent = match.groups!["sentenceContent"];
 
