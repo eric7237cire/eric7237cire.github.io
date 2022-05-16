@@ -1,8 +1,12 @@
 import levenshtein from "js-levenshtein";
 
-export function getWords(name1: string): Array<string>
+function stripPunctuation(str: string): string {
+  return str.replace(/[,¿?;.!¡:]/g, "");
+}
+
+export function getWords(str: string): Array<string>
 {
-   return name1.split(/\s+/).filter(s => s.length > 0);
+   return stripPunctuation(str).split(/\s+/).filter(s => s.length > 0).map(s => s.trim());
 }
 
 export function getScore(answerAttempt: string, correctAnswer: string) : number {
@@ -14,30 +18,31 @@ export function getScore(answerAttempt: string, correctAnswer: string) : number 
     return 0;
   }
 
-  let searchNameUpper: string = answerAttempt.toLocaleUpperCase();
-  let settlementNameUpper: string = correctAnswer.toLocaleUpperCase();
+  let attemptUpper: string = answerAttempt.toLocaleUpperCase();
+  let correctAnswerUpper: string = correctAnswer.toLocaleUpperCase();
 
-  const searchWords = getWords(searchNameUpper);
-  const settlementWords = getWords(settlementNameUpper);
+  const attemptWords = getWords(attemptUpper);
+  const correctWords = getWords(correctAnswerUpper);
+  const correctWordsLength = correctWords.length;
 
   //For each search word, take the best score and add it
   //each perfect word match is == 1
 
   //Also initialize the score with an overall match, same thing overall match is 1
-  const len = Math.max(searchNameUpper.length, settlementNameUpper.length);
-  const ld = levenshtein(searchNameUpper, settlementNameUpper);
+  const len = Math.max(attemptUpper.length, correctAnswerUpper.length);
+  const ld = levenshtein( attemptWords.join(" "), correctWords.join(" "));
 
   let totalDiff = 1-ld/len;
 
   //If the search name is only 1 word, return the min levenstein of the matching words
-  for(const searchWord of searchWords) {
+  for(const searchWord of attemptWords) {
     let bestScore = -1;
     let bestIndex = -1;
 
-    if (settlementWords.length <= 0) {
+    if (correctWords.length <= 0) {
       break;
     }
-    for (const [idx, settlementWord] of settlementWords.entries()) {
+    for (const [idx, settlementWord] of correctWords.entries()) {
       const len = Math.max(settlementWord.length, searchWord.length);
       const ld = levenshtein(searchWord, settlementWord);
       //add a small score for a single word match
@@ -49,12 +54,12 @@ export function getScore(answerAttempt: string, correctAnswer: string) : number 
     }
 
     //remove the settlement word
-    settlementWords.splice(bestIndex, 1);
+    correctWords.splice(bestIndex, 1);
 
     totalDiff += bestScore;
   }
 
-  return totalDiff;
+  return 100 * totalDiff / (1+correctWordsLength);
 
 
 }

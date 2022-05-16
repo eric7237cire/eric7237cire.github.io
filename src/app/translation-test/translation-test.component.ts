@@ -3,6 +3,7 @@ import {ngxLocalStorage} from 'ngx-localstorage';
 import {AnswerAttempt, Lesson} from "../util/interfaces";
 import {StorageService} from "../services/storage.service";
 import {getScore, getWords} from "../util/string";
+import {RingBuffer} from "ring-buffer-ts";
 
 @Component({
   selector: 'app-translation-test',
@@ -14,13 +15,16 @@ export class TranslationTestComponent implements OnInit {
   @ngxLocalStorage()
   lessonNumber!: number;
 
-  @ngxLocalStorage({nullTransformer: () => 0})
   sentenceNumber!: number;
 
   englishText: string = "";
   spanishText: string = "";
   hintStructure: string = "";
   spanishWords: number = 0;
+
+  lastAnswer = "";
+  lastAttempt = "";
+  lastScore = "";
 
   @ngxLocalStorage({nullTransformer: () => ""})
   spanishAttempt!: string;
@@ -29,9 +33,10 @@ export class TranslationTestComponent implements OnInit {
   attempts: Array<AnswerAttempt> = [];
   lessonData: Array<Lesson> = [];
   currentLesson!: Lesson;
+  nextSentenceNumbers: Array<number> = [];
 
   showAnswer = false;
-  showStructure = false;
+  showStructure = true;
 
   constructor(private storageService: StorageService)
   {
@@ -49,6 +54,12 @@ export class TranslationTestComponent implements OnInit {
 
   handleLessonNumberChanged(_num = 0) {
     this.currentLesson = this.lessonData.find( lesson => lesson.num == this.lessonNumber)!;
+
+    this.sentenceNumber = 0;
+
+    for(let s = 1; s < this.currentLesson.sentences.length; ++s) {
+      this.nextSentenceNumbers.push(s)
+    }
 
     this.handleSentenceNumberChanged();
   }
@@ -69,7 +80,7 @@ export class TranslationTestComponent implements OnInit {
     this.englishText = sentence.en;
     this.spanishText = sentence.es;
     this.spanishWords = getWords(this.spanishText).length;
-    this.hintStructure = this.spanishText.replace(/\w/g, "_");
+    this.hintStructure = this.spanishText.replace(/[\wúÚéÉáÁóÓíÍñÑ]/g, "_");
 
     this.handleSpanishInputChange(this.spanishAttempt);
   }
@@ -86,12 +97,36 @@ export class TranslationTestComponent implements OnInit {
 
     const score = getScore(this.spanishAttempt, this.spanishText).toFixed(2);
 
-    this.scoreText = `Score is ${score}`;
+    this.scoreText = `Score is %${score}`;
   }
 
   finishSpanishAttempt() {
-    this.sentenceNumber += 1;
+
+
+
+    const score = getScore(this.spanishAttempt, this.spanishText);
+
+    this.lastScore = `Score is %${score.toFixed(2)}`;
+
+    this.attempts.push( {
+      lessonNumber: this.lessonNumber, score, sentenceNumber: this.sentenceNumber, spanishAttempt: ""
+    });
+
+    this.lastAttempt = this.spanishAttempt;
+    this.lastAnswer = this.spanishText;
+
+    if (score < 100) {
+      this.nextSentenceNumbers.push(this.sentenceNumber);
+    }
+
+    this.sentenceNumber = this.nextSentenceNumbers[0];
+    this.nextSentenceNumbers.splice(0, 1);
+
+    this.lastScore += ` Remaining: ${this.nextSentenceNumbers.length}`;
+
+
     this.spanishAttempt = "";
+
     this.handleSentenceNumberChanged();
   }
 

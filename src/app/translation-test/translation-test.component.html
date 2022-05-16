@@ -23,23 +23,31 @@
   </div>
 
   <label *ngIf="showStructure">Hint Structure</label>
-  <div *ngIf="showStructure">{{hintStructure}}</div>
+  <div *ngIf="showStructure" class="font-mono">{{hintStructure}}</div>
   <label *ngIf="showAnswer">Hint Answer</label>
-  <div *ngIf="showAnswer">{{spanishText}}</div>
+  <div *ngIf="showAnswer" class="font-mono">{{spanishText}}</div>
 
   <label>Current Score:</label>
   <div>
     {{scoreText}}
   </div>
 
-  <label>Spanish answer:</label>
+  <label>Spanish attempt:</label>
   <div>
     <input
       style="grid-column: 2"
-      class="form-control spanish-input"
+      autofocus
+      class="form-control spanish-input font-mono"
       [ngModel]="spanishAttempt" (ngModelChange)="handleSpanishInputChange($event)"
       (keydown.enter)='finishSpanishAttempt()'
     >
   </div>
+
+  <label>Last Score:</label>
+  <div >{{lastScore}}</div>
+  <label>Last Attempt:</label>
+  <div class="font-mont">{{lastAttempt}}</div>
+  <label>Last Answer:</label>
+  <div class="font-mont">{{lastAnswer}}</div>
 
 </div>
