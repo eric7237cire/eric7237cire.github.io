@@ -1,0 +1,45 @@
+
+<div class="container m-8">
+
+  <label style="grid-column: 1">Lesson Number:</label>
+  <input class="form-control number-input"
+         style="grid-column: 2"
+         type="number"  min="1" max="100"
+
+         [(ngModel)]="lessonNumber" (ngModelChange)="handleLessonNumberChanged($event)">
+
+  <label>Sentence Number:</label>
+  <input class="form-control number-input w-fit " type="number"  min="0" max="40" [(ngModel)]="sentenceNumber" (ngModelChange)="handleSentenceNumberChanged($event)" >
+
+  <label>English text:</label>
+  <div>
+    {{englishText}}
+  </div>
+
+  <label>Hints</label>
+  <div class="flex flex-row">
+    <button class="btn-hint" (click)="handleShowStructure()">Structure</button>
+    <button class="btn-hint" (click)="handleShowAnswer()">Answer</button>
+  </div>
+
+  <label *ngIf="showStructure">Hint Structure</label>
+  <div *ngIf="showStructure">{{hintStructure}}</div>
+  <label *ngIf="showAnswer">Hint Answer</label>
+  <div *ngIf="showAnswer">{{spanishText}}</div>
+
+  <label>Current Score:</label>
+  <div>
+    {{scoreText}}
+  </div>
+
+  <label>Spanish answer:</label>
+  <div>
+    <input
+      style="grid-column: 2"
+      class="form-control spanish-input"
+      [ngModel]="spanishAttempt" (ngModelChange)="handleSpanishInputChange($event)"
+      (keydown.enter)='finishSpanishAttempt()'
+    >
+  </div>
+
+</div>
