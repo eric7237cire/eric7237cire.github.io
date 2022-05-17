@@ -57,9 +57,14 @@ export class TranslationTestComponent implements OnInit {
 
     this.sentenceNumber = 0;
 
+    this.nextSentenceNumbers = [];
     for(let s = 1; s < this.currentLesson.sentences.length; ++s) {
       this.nextSentenceNumbers.push(s)
     }
+
+    this.lastScore = `Remaining ${this.nextSentenceNumbers.length}`;
+    this.lastAttempt = "";
+    this.lastAnswer = "";
 
     this.handleSentenceNumberChanged();
   }

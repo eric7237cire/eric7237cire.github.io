@@ -50,13 +50,7 @@ export class DataLoadComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    this.fullText = localStorage.getItem(LOCAL_STORAGE_KEY) || "Load file needed";
 
-    try {
-      this.parseText();
-    } catch(e) {
-      this.logService.logMessage(`Error ${e}`);
-    }
 
     this.logService.logMessage("Starting...");
     this.logService.logs.pipe(
@@ -68,6 +62,16 @@ export class DataLoadComponent implements OnInit {
   }
 
   async storeInIndexDb() {
+    this.logService.logMessage("Getting from local storage...");
+    this.fullText = localStorage.getItem(LOCAL_STORAGE_KEY) || "Load file needed";
+
+    try {
+      this.logService.logMessage("Parsing...");
+      this.parseText();
+    } catch(e) {
+      this.logService.logMessage(`Error ${e}`);
+    }
+
     await this.storageService.ensureCreated();
     await this.storageService.storeLessons(this.lessons);
   }
