@@ -12,7 +12,7 @@ import {RingBuffer} from "ring-buffer-ts";
 })
 export class TranslationTestComponent implements OnInit {
 
-  @ngxLocalStorage()
+  @ngxLocalStorage({nullTransformer: () => 0})
   lessonNumber!: number;
 
   sentenceNumber!: number;
