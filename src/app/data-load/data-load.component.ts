@@ -5,7 +5,7 @@ import {Subject, takeUntil} from "rxjs";
 import {Lesson} from "../util/interfaces";
 import {StorageService} from "../services/storage.service";
 
-const LOCAL_STORAGE_KEY = "fullText";
+//const LOCAL_STORAGE_KEY = "fullText";
 
 const LESSON_REGEX = new RegExp(verboseRegExp`
   (
@@ -63,7 +63,7 @@ export class DataLoadComponent implements OnInit {
 
   async storeInIndexDb(isSentences: boolean) {
     this.logService.logMessage("Getting from local storage...");
-    this.fullText = localStorage.getItem(LOCAL_STORAGE_KEY) || "Load file needed";
+    //this.fullText = localStorage.getItem(LOCAL_STORAGE_KEY) || "Load file needed";
 
     try {
       this.logService.logMessage("Parsing...");
@@ -126,7 +126,7 @@ export class DataLoadComponent implements OnInit {
     reader.onload = (e: any) => {
       console.log('csv content', e.target.result);
 
-      localStorage.setItem(LOCAL_STORAGE_KEY, e.target.result);
+      this.fullText = e.target.result;
     };
 
     const inputElement = e.currentTarget as HTMLInputElement;
