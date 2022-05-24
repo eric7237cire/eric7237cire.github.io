@@ -32,6 +32,8 @@ export class TranslationTestComponent implements OnInit {
 
   attempts: Array<AnswerAttempt> = [];
   lessonData: Array<Lesson> = [];
+  sentenceData: Array<Lesson> = [];
+  isSentences = false;
   currentLesson!: Lesson;
   nextSentenceNumbers: Array<number> = [];
 
@@ -47,14 +49,27 @@ export class TranslationTestComponent implements OnInit {
 
     await this.storageService.ensureCreated();
     this.lessonData = await this.storageService.retrieveLessons();
+    this.sentenceData = await this.storageService.retrieveSentences();
+
     this.handleLessonNumberChanged();
 
 
   }
 
   handleLessonNumberChanged(_num = 0) {
-    this.currentLesson = this.lessonData.find( lesson => lesson.num == this.lessonNumber)!;
+    let lessons: Array<Lesson> = [];
+    if (this.isSentences) {
+      lessons = this.sentenceData;
+    } else {
+      lessons = this.lessonData;
+    }
 
+    this.currentLesson = lessons.find(lesson => lesson.num == this.lessonNumber)!;
+
+    if (!this.currentLesson) {
+      this.lastScore = "Lesson not found";
+      return;
+    }
     this.sentenceNumber = 0;
 
     this.nextSentenceNumbers = [];

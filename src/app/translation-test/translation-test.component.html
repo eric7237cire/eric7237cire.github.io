@@ -1,6 +1,13 @@
 
 <div class="container m-8">
 
+  <label style="grid-column: 1">Sentence Test:</label>
+  <input
+  type="checkbox"
+  style="grid-column: 2"
+  [(ngModel)]="isSentences"
+  [ngModelOptions]="{standalone: true}"/>
+
   <label style="grid-column: 1">Lesson Number:</label>
   <input class="form-control number-input"
          style="grid-column: 2"

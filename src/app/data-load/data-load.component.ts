@@ -61,7 +61,7 @@ export class DataLoadComponent implements OnInit {
     );
   }
 
-  async storeInIndexDb() {
+  async storeInIndexDb(isSentences: boolean) {
     this.logService.logMessage("Getting from local storage...");
     this.fullText = localStorage.getItem(LOCAL_STORAGE_KEY) || "Load file needed";
 
@@ -73,8 +73,15 @@ export class DataLoadComponent implements OnInit {
     }
 
     await this.storageService.ensureCreated();
-    await this.storageService.storeLessons(this.lessons);
+
+    if (isSentences) {
+      await this.storageService.storeSentences(this.lessons);
+    } else {
+      await this.storageService.storeLessons(this.lessons);
+    }
   }
+
+
 
   private parseText() {
     const lines = this.fullText.split("\n");
