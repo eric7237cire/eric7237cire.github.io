@@ -1,8 +1,6 @@
 
 
-<div class="flex flex-col h-screen">
-  <a class="flex-auto
-    flex-grow-0" [routerLink]="[ '/', 'trans-test' ]">Translation Test</a>
+<div class="flex flex-col h-screen gap-y-2 m-2">
 
   <input class="flex-auto
     flex-grow-0 flex-shrink-0"
@@ -12,7 +10,9 @@
     btn btn-blue
     flex-auto
     flex-grow-0
-    ">Store Lessons Indexdb</button>
+    "
+    data-testid="store-lessons-button"
+  >Store Lessons Indexdb</button>
 
   <button (click)="storeInIndexDb(true)" class="
     btn btn-blue

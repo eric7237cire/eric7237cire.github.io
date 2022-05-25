@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StorageService} from "../services/storage.service";
 
 @Component({
   selector: 'app-spanish-root',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpanishRootComponent implements OnInit {
 
-  constructor() { }
+  numSentences = 0;
+  numLessons = 0;
 
-  ngOnInit(): void {
+  constructor(private storageService: StorageService) { }
+
+  async ngOnInit() {
+    this.numLessons = (await this.storageService.retrieveLessons()).length;
+    this.numSentences = (await this.storageService.retrieveSentences()).length;
+
   }
 
 }

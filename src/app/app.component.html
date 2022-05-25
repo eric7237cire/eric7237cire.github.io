@@ -1,1 +1,7 @@
+<div class="flex flex-row m-2 gap-x-2">
+  <a [routerLink]="[ '/' ]">Root</a>
+  <a
+    [routerLink]="[ '/', 'data-load' ]">Data Loading</a>
+  <a [routerLink]="[ '/', 'trans-test' ]">Translation Test</a>
+</div>
 <router-outlet></router-outlet>

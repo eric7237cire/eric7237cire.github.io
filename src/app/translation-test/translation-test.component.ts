@@ -4,6 +4,7 @@ import {AnswerAttempt, Lesson} from "../util/interfaces";
 import {StorageService} from "../services/storage.service";
 import {getScore, getWords} from "../util/string";
 import {RingBuffer} from "ring-buffer-ts";
+import {DiffMatchPatch} from "diff-match-patch-typescript";
 
 @Component({
   selector: 'app-translation-test',
@@ -134,6 +135,10 @@ export class TranslationTestComponent implements OnInit {
 
     this.lastAttempt = this.spanishAttempt;
     this.lastAnswer = this.spanishText;
+
+    const dmp = new DiffMatchPatch();
+    dmp.diff_main(this.spanishAttempt, this.spanishText)
+
 
     if (score < 100) {
       this.nextSentenceNumbers.push(this.sentenceNumber);

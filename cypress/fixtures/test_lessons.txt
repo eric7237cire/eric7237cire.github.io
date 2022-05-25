@@ -1,0 +1,8 @@
+50.  Lección uno
+
+0.  Hola, como estás ?
+1.  ¡Por favor!
+
+
+0.  Hello, how are you?
+1.  Please !
