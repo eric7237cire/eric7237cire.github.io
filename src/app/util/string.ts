@@ -1,5 +1,40 @@
 import levenshtein from "js-levenshtein";
 
+function isLetter(c: string) : boolean {
+  return c.toLowerCase() != c.toUpperCase();
+}
+
+export interface OL_M {
+  rawText: string,
+  cleanText: string,
+  mapping: Array<number>
+}
+export function getUpperCaseLettersAndMapping(rawStr: string) : OL_M {
+
+  const mapping: Array<number> = [];
+  const onlyLetters: Array<string> = [];
+  let lastWasSpace = false;
+
+  for (let i = 0; i < rawStr.length; i++) {
+    const ch = rawStr.charAt(i);
+    if (isLetter(ch)) {
+      onlyLetters.push(ch.toLocaleLowerCase());
+      mapping.push(i);
+      lastWasSpace = false;
+    } else {
+      if (!lastWasSpace) {
+        onlyLetters.push(" ");
+        mapping.push(i);
+        lastWasSpace = true;
+      }
+    }
+  }
+
+  return {
+    mapping, rawText: rawStr, cleanText: onlyLetters.join("")
+  }
+}
+
 function stripPunctuation(str: string): string {
   return str.replace(/[,¿?;.!¡:'"()]/g, "");
 }

@@ -50,3 +50,15 @@ label {
 .btn-hint:hover {
   @apply bg-blue-700;
 }
+
+ins {
+  background:#e6ffe6;
+}
+
+del {
+  background:#ffe6e6;
+}
+
+.test-grid {
+  @apply container m-2 grid-cols-2;
+}
