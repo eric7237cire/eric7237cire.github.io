@@ -1,6 +1,6 @@
 1.  Lección uno
 
-0.  Hola, como estás ?
+0.  ¿Hola, Como estás ?  Bien, y tú?
 1.  ¡Por favor!
 
 
