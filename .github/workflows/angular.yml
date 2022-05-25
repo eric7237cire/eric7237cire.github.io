@@ -21,11 +21,11 @@ jobs:
       with:
         cache: 'npm'
     - run: npm install -g @angular/cli > /dev/null
-    - name : Cypress run
-      uses : cypress-io/github-action@v2
-      with :
-        start: ng serve
-        wait-on : http://localhost:4200
+#    - name : Cypress run
+#      uses : cypress-io/github-action@v2
+#      with :
+#        start: ng serve
+#        wait-on : http://localhost:4200
     - run: ng build
     - run: cp ./docs/index.html ./docs/404.html
     - name : Deploy
@@ -33,3 +33,4 @@ jobs:
       with :
         github_token : ${{ secrets.GITHUB_TOKEN }}
         publish_dir  : ./docs
+        publish_branch: gh-pages
