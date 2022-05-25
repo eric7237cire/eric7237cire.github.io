@@ -14,6 +14,7 @@ export class SpanishRootComponent implements OnInit {
   constructor(private storageService: StorageService) { }
 
   async ngOnInit() {
+    await this.storageService.ensureCreated();
     this.numLessons = (await this.storageService.retrieveLessons()).length;
     this.numSentences = (await this.storageService.retrieveSentences()).length;
 

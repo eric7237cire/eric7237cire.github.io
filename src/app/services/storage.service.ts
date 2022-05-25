@@ -20,6 +20,9 @@ export class StorageService {
 
   public async ensureCreated(): Promise<void> {
 
+    if (this.db) {
+      return;
+    }
     this.db = await openDB(IDB_NAME, 2, {
       upgrade(db: IDBPDatabase) {
 
