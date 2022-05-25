@@ -26,3 +26,10 @@ jobs:
       with :
         start: ng serve
         wait-on : http://localhost:4200
+    - run: ng build
+    - run: cp ./docs/index.html ./docs/404.html
+    - name : Deploy
+      uses : peaceiris/actions-gh-pages@v3
+      with :
+        github_token : ${{ secrets.GITHUB_TOKEN }}
+        publish_dir  : ./docs
