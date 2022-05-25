@@ -23,5 +23,5 @@ jobs:
     - name : Cypress run
       uses : cypress-io/github-action@v2
       with :
-        #build   : npm run cy:run
+        start: ng serve
         wait-on : http://localhost:4200
