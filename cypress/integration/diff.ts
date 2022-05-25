@@ -15,6 +15,18 @@ describe('See sentence diff', () => {
   it('Should show the diff', () => {
     cy.title().should('equal', 'SpanishApp');
 
-    cy.get('[data-testid="spanish-attempt"]').type(" la; commmi      éstas  Bienytú{enter}");
+    cy.get('[data-testid="spanish-attempt"]').type("la; commmi      éstas  Bienytú{enter}");
+
+    cy.get('[data-testid="diff"] ins').should(insElements => {
+      expect(insElements.length).to.equal(7);
+      expect(insElements.first().text()).to.equal('¿Ho');
+      expect(insElements.last().text()).to.equal('?');
+    });
+
+
+
+
+
+
   });
 });

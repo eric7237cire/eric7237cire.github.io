@@ -225,7 +225,7 @@ function applyAnswerText(text: string, positions: AnswerPositions, answer: OL_M)
       if (text.charAt(i) == " ") {
 
         let fromInRaw = answer.mapping[positions.clean];
-        let toInRaw = answer.rawText.length - 1;
+        let toInRaw = answer.rawText.length;
         if (positions.clean + 1 < answer.mapping.length) {
           toInRaw = answer.mapping[positions.clean+1];
         }
