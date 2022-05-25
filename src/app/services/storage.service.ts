@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {IDBPDatabase, openDB} from "idb";
 import {Lesson} from "../util/interfaces";
+import {LoggerService} from "./logger.service";
 
 
 const IDB_NAME = "lessonData";
@@ -14,7 +15,7 @@ export class StorageService {
 
   private db!: IDBPDatabase<unknown>;
 
-  constructor() {
+  constructor(private logService: LoggerService) {
   }
 
   public async ensureCreated(): Promise<void> {
@@ -43,7 +44,7 @@ export class StorageService {
     await store.clear();
     for (const value of lessons) {
         const result = await store.put(value);
-        console.log('Put Bulk Data ', result);
+        this.logService.logMessage(`Put Bulk Data ${result}`);
     }
   }
 

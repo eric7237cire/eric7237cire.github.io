@@ -1,4 +1,4 @@
-50.  Lección uno
+1.  Lección uno
 
 0.  Hola, como estás ?
 1.  ¡Por favor!

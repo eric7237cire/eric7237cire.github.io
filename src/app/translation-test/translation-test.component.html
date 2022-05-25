@@ -12,11 +12,14 @@
   <input class="form-control number-input"
          style="grid-column: 2"
          type="number"  min="1" max="100"
-
+         data-testid="lesson-number"
          [(ngModel)]="lessonNumber" (ngModelChange)="handleLessonNumberChanged($event)">
 
   <label>Sentence Number:</label>
-  <input class="form-control number-input w-fit " type="number"  min="0" max="40" [(ngModel)]="sentenceNumber" (ngModelChange)="handleSentenceNumberChanged($event)" >
+  <input class="form-control number-input w-fit "
+         type="number"  min="0" max="40"
+         [(ngModel)]="sentenceNumber"
+         (ngModelChange)="handleSentenceNumberChanged($event)" >
 
   <label>English text:</label>
   <div>
@@ -45,6 +48,7 @@
       style="grid-column: 2"
       autofocus
       class="form-control spanish-input font-mono"
+      data-testid="spanish-attempt"
       [ngModel]="spanishAttempt" (ngModelChange)="handleSpanishInputChange($event)"
       (keydown.enter)='finishSpanishAttempt()'
     >

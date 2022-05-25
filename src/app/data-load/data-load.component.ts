@@ -77,6 +77,7 @@ export class DataLoadComponent implements OnInit {
     if (isSentences) {
       await this.storageService.storeSentences(this.lessons);
     } else {
+      this.logService.logMessage("Storing Lessons");
       await this.storageService.storeLessons(this.lessons);
     }
   }
