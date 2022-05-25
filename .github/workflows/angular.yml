@@ -20,4 +20,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         cache: 'npm'
-
+    - name : Cypress run
+      uses : cypress-io/github-action@v2
+      with :
+        #build   : npm run cy:run
+        wait-on : http://localhost:4200
