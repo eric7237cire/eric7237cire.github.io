@@ -5,9 +5,13 @@ name: Angular CI
 
 on:
   push:
-    branches: [ eg_2022_05_14 ]
+    branches:
+    - 'eg**'
+    - main
   pull_request:
-    branches: [ eg_2022_05_14 ]
+    branches :
+    - 'eg**'
+    - main
 
 jobs:
   build:
@@ -36,3 +40,4 @@ jobs:
         github_token : ${{ secrets.GITHUB_TOKEN }}
         publish_dir  : ./docs
         publish_branch: gh-pages
+        keep_files: true
