@@ -2,7 +2,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ngxLocalStorage} from 'ngx-localstorage';
 import {AnswerAttempt, Lesson} from "../util/interfaces";
 import {StorageService} from "../services/storage.service";
-import {getScore, getUpperCaseLettersAndMapping, getWords, OL_M} from "../util/string";
+import {getPuncWordArray, getScore, getUpperCaseLettersAndMapping, getWords, OL_M} from "../util/string";
 import {Diff, DiffMatchPatch} from "diff-match-patch-typescript";
 import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
 
@@ -24,7 +24,7 @@ export class TranslationTestComponent implements OnInit {
   hintStructure: string = "";
   spanishWords: number = 0;
 
-  lastAnswer = "";
+  lastAnswer: Array<string> = [];
   lastAttempt = "";
   lastScore = "";
 
@@ -86,7 +86,7 @@ export class TranslationTestComponent implements OnInit {
 
     this.lastScore = `Remaining ${this.nextSentenceNumbers.length}`;
     this.lastAttempt = "";
-    this.lastAnswer = "";
+    this.lastAnswer = [];
 
     this.handleSentenceNumberChanged();
   }
@@ -140,7 +140,9 @@ export class TranslationTestComponent implements OnInit {
     });
 
     this.lastAttempt = this.spanishAttempt;
-    this.lastAnswer = this.spanishText;
+    this.lastAnswer = getPuncWordArray(this.spanishText);
+
+    console.log("Last Answer: ", this.lastAnswer);
 
     const spanishAttemptLetters = getUpperCaseLettersAndMapping(this.spanishAttempt);
     const answerLetters = getUpperCaseLettersAndMapping(this.spanishText);
@@ -167,7 +169,16 @@ export class TranslationTestComponent implements OnInit {
     this.handleSentenceNumberChanged();
   }
 
+  isCommonWord(word: string) : boolean {
+    return COMMON_WORDS.has(word.toLocaleLowerCase());
+  }
+
 }
+
+const COMMON_WORDS = new Set<string>([
+  "tú",
+  "y"
+]);
 
 function escapeHtml(unsafe:string) : string {
     return unsafe.replaceAll('&', '&amp;')
@@ -217,7 +228,7 @@ function diffPrettyHtml(diffs: Array<Diff>, spanishAnswer: OL_M) {
 function applyAnswerText(text: string, positions: AnswerPositions, answer: OL_M) : string {
   //If we are doing insert, we only do the letters
 
-  console.log(`Processing [${text}] -- ${positions.raw} and ${positions.clean}`);
+  //console.log(`Processing [${text}] -- ${positions.raw} and ${positions.clean}`);
   const applied: Array<string> = [];
 
     for (let i = 0; i < text.length; ++i) {
@@ -229,7 +240,7 @@ function applyAnswerText(text: string, positions: AnswerPositions, answer: OL_M)
         if (positions.clean + 1 < answer.mapping.length) {
           toInRaw = answer.mapping[positions.clean+1];
         }
-        console.log(`Space from ${fromInRaw} to ${toInRaw}.  Clean pos ${positions.clean} [${answer.cleanText[positions.clean]}] raw pos ${positions.raw}`);
+        //console.log(`Space from ${fromInRaw} to ${toInRaw}.  Clean pos ${positions.clean} [${answer.cleanText[positions.clean]}] raw pos ${positions.raw}`);
         for(let j = fromInRaw; j < toInRaw; ++j) {
           applied.push(answer.rawText.charAt(positions.raw));
           ++positions.raw;

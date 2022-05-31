@@ -61,6 +61,13 @@
   <label>Last Attempt:</label>
   <div class="font-mont">{{lastAttempt}}</div>
   <label>Last Answer:</label>
-  <div class="font-mont">{{lastAnswer}}</div>
+  <div data-testid="last-answer" class="font-mont">
+    <ng-container *ngFor="let piece of lastAnswer; odd as isOdd; even as isEven;">
+      <span *ngIf="isEven || isCommonWord(piece)">{{piece}}</span>
+      <a *ngIf="isOdd && !isCommonWord(piece)" target="helpframe"
+         [href]="'https://www.spanishdict.com/translate/' + piece"
+         >{{piece}}</a>
+    </ng-container>
+  </div>
 
 </div>

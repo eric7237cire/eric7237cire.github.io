@@ -35,6 +35,31 @@ export function getUpperCaseLettersAndMapping(rawStr: string) : OL_M {
   }
 }
 
+//returns even indexes as spaces/punctionation; odd as words
+export function getPuncWordArray(rawStr: string): Array<string> {
+  const pieces: Array<string> = [""];
+  let currentIndex = 0;
+
+  for (let i = 0; i < rawStr.length; i++) {
+
+    let isPuncOrSpaces = currentIndex % 2 == 0;
+    const ch = rawStr.charAt(i);
+    let isChALetter = isLetter(ch);
+
+    if ( (isPuncOrSpaces && isChALetter) || (
+      (!isPuncOrSpaces && !isChALetter)
+    )) {
+      ++currentIndex;
+      pieces.push("");
+    }
+
+    pieces[currentIndex] += ch;
+
+  }
+
+  return pieces;
+}
+
 function stripPunctuation(str: string): string {
   return str.replace(/[,¿?;.!¡:'"()…]/g, "");
 }

@@ -7,10 +7,11 @@ import {StorageService} from "../services/storage.service";
 
 //const LOCAL_STORAGE_KEY = "fullText";
 
+//No leading 0 in the lessons
 const LESSON_REGEX = new RegExp(verboseRegExp`
   (
   ?<lessonNumber>
-  \d+
+  [1-9]\d*
   ) // digits
   \.
   \s*

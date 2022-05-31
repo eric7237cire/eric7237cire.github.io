@@ -27,11 +27,11 @@ jobs:
         cache: 'npm'
     - run: npm install -g @angular/cli > /dev/null
     - run: npm install > /dev/null
-#    - name : Cypress run
-#      uses : cypress-io/github-action@v2
-#      with :
-#        start: ng serve
-#        wait-on : http://localhost:4200
+    - name : Cypress run
+      uses : cypress-io/github-action@v2
+      with :
+        start: ng serve
+        wait-on : http://localhost:4200
     - run: ng build
     - run: cp ./docs/index.html ./docs/404.html
     - name : Deploy

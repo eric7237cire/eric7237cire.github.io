@@ -1,4 +1,4 @@
-describe('See sentence diff', () => {
+describe('Translation test page', () => {
   beforeEach(() => {
     cy.visit('/data-load');
 
@@ -6,7 +6,6 @@ describe('See sentence diff', () => {
 
     cy.get('[data-testid="store-lessons-button"]').click();
 
-    //cy.visit('/');
     cy.visit('/trans-test');
 
     cy.get('[data-testid="lesson-number"]').type("1");
@@ -15,7 +14,7 @@ describe('See sentence diff', () => {
   it('Should show the diff', () => {
     cy.title().should('equal', 'SpanishApp');
 
-    cy.get('[data-testid="spanish-attempt"]').type("la; commmi      éstas  Bienytú{enter}");
+    cy.get('[data-testid="spanish-attempt"]').type("la; cómmmi      éstas  Bienytú{enter}");
 
     cy.get('[data-testid="diff"] ins').should(insElements => {
       expect(insElements.length).to.equal(7);
@@ -23,10 +22,15 @@ describe('See sentence diff', () => {
       expect(insElements.last().text()).to.equal('?');
     });
 
+  });
 
+  it('Should show the correct answer links', () => {
 
+    cy.get('[data-testid="spanish-attempt"]').type("Hola; cómo   éstas  Bien y tú{enter}");
 
-
+    cy.get('[data-testid="last-answer"] a').should(links => {
+      expect(links.length).to.equal(4);
+    });
 
   });
 });
