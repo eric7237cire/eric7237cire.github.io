@@ -14,7 +14,7 @@ export class SpanishRootComponent implements OnInit {
 
   commitSha = environment.commitSha
   commitRefName = environment.commitRefName
-  commitAt = environment.commitedAt
+  commitTime = environment.commitTime
 
   constructor(private storageService: StorageService) { }
 
