@@ -177,7 +177,27 @@ export class TranslationTestComponent implements OnInit {
 
 const COMMON_WORDS = new Set<string>([
   "tú",
-  "y"
+  "y",
+  "la",
+  "del",
+  "de",
+  "un",
+  "que",
+  "no",
+  "el",
+  "a",
+  "e",
+  "se",
+  "los",
+  "las",
+  "en",
+  "me",
+  "les",
+  "he",
+  "pero",
+  "ti",
+  "sé",
+  "es"
 ]);
 
 function escapeHtml(unsafe:string) : string {
