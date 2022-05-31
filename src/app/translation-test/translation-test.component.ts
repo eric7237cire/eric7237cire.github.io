@@ -28,7 +28,7 @@ export class TranslationTestComponent implements OnInit {
   lastAttempt = "";
   lastScore = "";
 
-  prettyHtml: SafeHtml = "";
+  diffHtml: SafeHtml = "";
 
   @ngxLocalStorage({nullTransformer: () => ""})
   spanishAttempt!: string;
@@ -87,7 +87,7 @@ export class TranslationTestComponent implements OnInit {
     this.lastScore = `Remaining ${this.nextSentenceNumbers.length}`;
     this.lastAttempt = "";
     this.lastAnswer = [];
-    this.prettyHtml = "";
+    this.diffHtml = "";
 
     this.handleSentenceNumberChanged();
   }
@@ -152,7 +152,7 @@ export class TranslationTestComponent implements OnInit {
     const diffResults = dmp.diff_main(spanishAttemptLetters.cleanText, answerLetters.cleanText);
     console.log("Diff results", diffResults);
     console.log("Parsed", answerLetters.mapping, answerLetters.cleanText, answerLetters.rawText);
-    this.prettyHtml = this.sanitizer.bypassSecurityTrustHtml(diffPrettyHtml(diffResults, answerLetters));
+    this.diffHtml = this.sanitizer.bypassSecurityTrustHtml(diffPrettyHtml(diffResults, answerLetters));
 
 
     if (score < 100) {
