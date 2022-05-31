@@ -2,8 +2,15 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+export const baseEnvironment = {
+  commitedAt: process.env.NG_APP_COMMITTED_AT,
+  commitSha: process.env.NG_APP_GITHUB_SHA,
+  commitRefName: process.env.NG_APP_GITHUB_REF_NAME,
+}
+
 export const environment = {
-  production: false
+  production: false,
+  ...baseEnvironment
 };
 
 /*

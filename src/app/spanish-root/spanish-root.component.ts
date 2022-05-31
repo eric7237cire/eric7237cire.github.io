@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {StorageService} from "../services/storage.service";
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-spanish-root',
@@ -10,6 +11,10 @@ export class SpanishRootComponent implements OnInit {
 
   numSentences = 0;
   numLessons = 0;
+
+  commitSha = environment.commitSha
+  commitRefName = environment.commitRefName
+  commitAt = environment.commitedAt
 
   constructor(private storageService: StorageService) { }
 
