@@ -201,6 +201,10 @@ const COMMON_WORDS = new Set<string>([
   "es",
   "para",
   "mi",
+  "por",
+  "qué",
+  "eso",
+  "esa",
 ]);
 
 function escapeHtml(unsafe:string) : string {
