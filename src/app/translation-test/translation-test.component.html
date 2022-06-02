@@ -65,7 +65,7 @@
     <ng-container *ngFor="let piece of lastAnswer; odd as isOdd; even as isEven;">
       <span *ngIf="isEven || isCommonWord(piece)">{{piece}}</span>
       <a *ngIf="isOdd && !isCommonWord(piece)" target="helpframe"
-         [href]="'https://www.spanishdict.com/translate/' + piece"
+         [href]="'https://www.spanishdict.com/translate/' + piece + '?langFrom=es'"
          >{{piece}}</a>
     </ng-container>
   </div>
