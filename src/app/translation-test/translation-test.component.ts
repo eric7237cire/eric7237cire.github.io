@@ -85,6 +85,8 @@ export class TranslationTestComponent implements OnInit {
     }
 
     this.lastScore = `Remaining ${this.nextSentenceNumbers.length}`;
+    this.spanishAttempt = "";
+    this.scoreText = "";
     this.lastAttempt = "";
     this.lastAnswer = [];
     this.diffHtml = "";
