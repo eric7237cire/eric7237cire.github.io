@@ -23,6 +23,7 @@ export class SpanishRootComponent implements OnInit {
     this.numLessons = (await this.storageService.retrieveLessons()).length;
     this.numSentences = (await this.storageService.retrieveSentences()).length;
 
+    console.log(`ngOnInit -- commitTime ${environment.commitTime}`);
   }
 
 }
