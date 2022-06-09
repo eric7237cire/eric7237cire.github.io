@@ -13,6 +13,9 @@ MIT
 @angular/router
 MIT
 
+@angular/service-worker
+MIT
+
 diff-match-patch-typescript
 Apache-2.0
                                 Apache License
