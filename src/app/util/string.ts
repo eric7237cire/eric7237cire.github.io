@@ -61,7 +61,7 @@ export function getPuncWordArray(rawStr: string): Array<string> {
 }
 
 function stripPunctuation(str: string): string {
-  return str.replace(/[,¿?;.!¡:'"()…—-’`]/g, "");
+  return str.replace(/[,¿?;.!¡:'"()…—-’`“”‘’]/g, "");
 }
 
 export function getWords(str: string): Array<string>
