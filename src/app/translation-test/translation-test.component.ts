@@ -58,7 +58,7 @@ export class TranslationTestComponent implements OnInit {
     this.lessonData = await this.storageService.retrieveLessons();
     this.sentenceData = await this.storageService.retrieveSentences();
 
-    this.handleLessonNumberChanged();
+    this.handleLessonNumberChanged(this.lessonNumber);
 
 
   }
