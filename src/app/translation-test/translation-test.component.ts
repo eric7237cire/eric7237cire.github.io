@@ -63,7 +63,9 @@ export class TranslationTestComponent implements OnInit {
 
   }
 
-  handleLessonNumberChanged(_num = 0) {
+  handleLessonNumberChanged(newLessonNumber = 0) {
+    this.lessonNumber = newLessonNumber;
+
     let lessons: Array<Lesson>;
     if (this.isSentences) {
       lessons = this.sentenceData;

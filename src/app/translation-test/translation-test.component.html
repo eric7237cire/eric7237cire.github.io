@@ -13,7 +13,7 @@
          style="grid-column: 2"
          type="number"  min="1" max="100"
          data-testid="lesson-number"
-         [(ngModel)]="lessonNumber" (ngModelChange)="handleLessonNumberChanged($event)">
+         [ngModel]="lessonNumber" (ngModelChange)="handleLessonNumberChanged($event)">
 
   <label>Sentence Number:</label>
   <input class="form-control number-input w-fit "
@@ -28,6 +28,8 @@
 
   <label>Hints</label>
   <div class="flex flex-row">
+    <button *ngIf="lessonNumber >= 50" class="btn-hint" (click)="handleLessonNumberChanged(lessonNumber-49)">To Second wave</button>
+    <button *ngIf="lessonNumber <= 51" class="btn-hint" (click)="handleLessonNumberChanged(lessonNumber+49)">From Second wave</button>
     <button class="btn-hint" (click)="handleShowStructure()">Structure</button>
     <button class="btn-hint" (click)="handleShowAnswer()">Answer</button>
   </div>
