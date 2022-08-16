@@ -19,13 +19,13 @@ interface Tarea {
 
 interface Question {
   problema: string,
-  indicio: string,
   repuestas: Array<Answer>
 }
 
 interface Answer {
   repuesta: string,
-  razón: string
+  razón: string,
+  indicio: string
 }
 
 @Component({
@@ -51,6 +51,7 @@ export class TareaComponent implements OnInit {
   //split into words / punc
   lastProblems: Array<Array<string>> = [];
   lastInputAnswers: Array<string> = [];
+  lastAnswers: Array<Answer> = [];
   scoreText = "";
 
   lessons: Array<Lesson> = [];
@@ -83,19 +84,28 @@ export class TareaComponent implements OnInit {
       }
     );
 
-    const url = this.route.snapshot.queryParamMap.get("json")!;
+    this.route.queryParamMap.subscribe(queryMap => {
 
-    if (!url) {
-      console.error("Cannot find json url param");
-      return;
-    }
+      const url = queryMap.get("json");
 
-    this.http.get<Tarea>(url).subscribe( r => {
-      this.logService.logMessage(`From ${url} got {r}`);
-      this.tarea = r;
+      if (!url) {
+        console.error("Cannot find json url param");
+        return;
+      }
 
-      this.problemNumber = 0;
-      this.handleProblemNumberChanged(0);
+      this.http.get<Tarea>(url).subscribe(r => {
+        this.logService.logMessage(`From ${url} got {r}`);
+        this.tarea = r;
+
+        this.problemNumber = 0;
+        this.lastAnswers = [];
+        this.lastScore = "";
+        this.correct = new Set<number>();
+        this.diffHtml = [];
+        this.lastInputAnswers = [];
+
+        this.handleProblemNumberChanged(0);
+      });
     });
 
     this.logService.logs.pipe(
@@ -154,7 +164,9 @@ export class TareaComponent implements OnInit {
 
     }
 
+    this.lastAnswers = currentProblem.repuestas;
 
+    //Choose next correct number
     if (numCorrect == this.lastInputAnswers.length) {
       this.correct.add(this.problemNumber);
     }

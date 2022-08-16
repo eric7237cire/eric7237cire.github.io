@@ -12,15 +12,14 @@
     {{tarea.preguntas[problemNumber].problema}}
   </div>
 
-  <label>Indicio:</label>
-  <div class="flex flex-row">
-    {{tarea.preguntas[problemNumber].indicio}}
-  </div>
+
 
   <label style="grid-column: 1">Repuestas:</label>
   <ng-container *ngFor="let item of [].constructor(this.inputAnswers.length); let i = index ">
+    <label style="grid-column: 1">{{i+1}}.  {{tarea.preguntas[problemNumber].repuestas[i].indicio}}</label>
     <input
       style="grid-column: 2"
+      (keyup.enter)="handleEvaluateAnswers()"
       autofocus
       class="form-control spanish-input font-mono"
       data-testid="spanish-attempt"
@@ -33,11 +32,16 @@
   <label style="grid-column: 1">Ultima puntuación:</label>
   <div >{{lastScore}}</div>
 
+</div>
+<div  *ngIf="tarea">
   <ng-container *ngFor="let item of [].constructor(this.lastInputAnswers.length); let i = index">
-    <label>Diff:</label>
-    <div [innerHTML]="diffHtml[i]"></div>
-    <label>Ultimo intento:</label>
-    <div class="font-mont">{{lastInputAnswers[i]}}</div>
-
+    <div class="answer-grid">
+      <label style="grid-column: 1">Repuesta {{i+1}}:</label>
+      <div class="answer-part" [innerHTML]="diffHtml[i]"></div>
+      <label style="grid-column: 1" class="answer-part">Ultimo intento:</label>
+      <div class="font-mont answer-part">{{lastInputAnswers[i]}}</div>
+      <label style="grid-column: 1">Razón:</label>
+      <div >{{lastAnswers[i]["razón"]}}</div>
+    </div>
   </ng-container>
 </div>

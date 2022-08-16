@@ -3,11 +3,11 @@
   "preguntas": [
     {
       "problema": "Mañana _____ la mañana voy a ir al supermercado.",
-      "indicio": "por o para",
       "repuestas": [
         {
           "repuesta": "por",
-          "razón": "tiempo"
+          "razón": "tiempo",
+          "indicio": "por o para"
         }
       ]
     },
@@ -17,15 +17,18 @@
       "repuestas": [
         {
           "repuesta": "por",
-          "razón": "intercambio"
+          "razón": "intercambio",
+          "indicio": "por o para"
         },
         {
           "repuesta": "para",
-          "razón": "finalidad, antes un infinitivo"
+          "razón": "finalidad, antes un infinitivo",
+          "indicio": "por o para"
         },
         {
           "repuesta": "para",
-          "razón": "finalidad / objectivo"
+          "razón": "finalidad / objectivo",
+          "indicio": "por o para"
         }
       ]
     },
@@ -35,11 +38,13 @@
       "repuestas": [
         {
           "repuesta": "para",
-          "razón": "finalidad, antes un infinitivo"
+          "razón": "finalidad, antes un infinitivo",
+          "indicio": "por o para"
         },
         {
           "repuesta": "para",
-          "razón": "finalidad, antes un infinitivo"
+          "razón": "finalidad, antes un infinitivo",
+          "indicio": "por o para"
         }
       ]
     },
@@ -49,7 +54,8 @@
       "repuestas": [
         {
           "repuesta": "por",
-          "razón": "Lugar"
+          "razón": "Lugar",
+          "indicio": "por o para"
         }
       ]
     },
@@ -59,7 +65,8 @@
       "repuestas": [
         {
           "repuesta": "para",
-          "razón": "Finalidad"
+          "razón": "Finalidad",
+          "indicio": "por o para"
         }
       ]
     }

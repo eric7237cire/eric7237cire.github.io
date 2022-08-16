@@ -62,3 +62,17 @@ del {
 .test-grid {
   @apply container m-2 grid-cols-2;
 }
+
+.answer-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, max-content) 1fr;
+  background-color: lightblue;
+  background-clip: content-box;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+.answer-part {
+  margin: 0px;
+  row-gap: 0px;
+}
