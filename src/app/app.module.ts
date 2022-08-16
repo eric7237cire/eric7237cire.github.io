@@ -9,18 +9,22 @@ import { TranslationTestComponent } from './translation-test/translation-test.co
 import {FormsModule} from "@angular/forms";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import {TareaComponent} from "./tarea/tarea.component";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     SpanishRootComponent,
     DataLoadComponent,
-    TranslationTestComponent
+    TranslationTestComponent,
+    TareaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable

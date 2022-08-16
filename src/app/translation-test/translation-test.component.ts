@@ -180,7 +180,7 @@ export class TranslationTestComponent implements OnInit {
 
 }
 
-const COMMON_WORDS = new Set<string>([
+export const COMMON_WORDS = new Set<string>([
   "tú",
   "y",
   "la",
@@ -232,7 +232,7 @@ const DIFF_EQUAL = 0;
 /**
  * Convert a diff array into a pretty HTML report.
  */
-function diffPrettyHtml(diffs: Array<Diff>, spanishAnswer: OL_M) {
+export function diffPrettyHtml(diffs: Array<Diff>, spanishAnswer: OL_M) {
   const html = [];
 
   const positions: AnswerPositions = {clean: 0, raw: 0};
