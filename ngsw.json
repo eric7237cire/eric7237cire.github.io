@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1660662631621,
+  "timestamp": 1660666147338,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -28,6 +28,7 @@
         "ignoreVary": true
       },
       "urls": [
+        "/assets/create_lesson.py",
         "/assets/icons/icon-128x128.png",
         "/assets/icons/icon-144x144.png",
         "/assets/icons/icon-152x152.png",
@@ -36,6 +37,7 @@
         "/assets/icons/icon-512x512.png",
         "/assets/icons/icon-72x72.png",
         "/assets/icons/icon-96x96.png",
+        "/assets/lessons/pasado_esp_pajaros.json",
         "/assets/lessons/pasado_imp_ind.json",
         "/assets/lessons/por_para.json"
       ],
@@ -44,6 +46,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/assets/create_lesson.py": "911be459aabf45489adb3081a6a3dcef6668e908",
     "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -52,11 +55,12 @@
     "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/lessons/pasado_esp_pajaros.json": "f5c37673a57bc6572a066a71a96f4b53a5be9f1e",
     "/assets/lessons/pasado_imp_ind.json": "5b7995e26223fd85cb8a841275985336a38df0f4",
     "/assets/lessons/por_para.json": "f9b7de44acf95ff9734b052cff75fba287a04e9b",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/index.html": "b2a6bd9b69a2666368047da3528b4f03cacca122",
-    "/main.js": "e503d143d7ee8dc73a109acdc44c32fab96c8dc3",
+    "/main.js": "3655df5fa31de7d084ef0fd88903ce50a0bbc420",
     "/polyfills.js": "29ad649d991b22be19c314955abdb941f2b7f3e7",
     "/runtime.js": "ed85a4346b574ebffaa26eadedec6164318e83d9",
     "/styles.css": "93acf5ed5e5899ad133de2c89ec37292de376436"
