@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import {verboseRegExp} from "../util/misc";
 import {LoggerService} from "../services/logger.service";
 import {Subject, takeUntil} from "rxjs";
@@ -57,6 +57,9 @@ export class TareaComponent implements OnInit {
   lessons: Array<Lesson> = [];
 
   correct: Set<number> = new Set<number>();
+
+  @ViewChild('inputans')
+  inputAnswer!: ElementRef;
 
   private unsubscribe = new Subject<void>();
 
@@ -124,6 +127,8 @@ export class TareaComponent implements OnInit {
     for(let i = 0; i < sentence.repuestas.length; ++i) {
       this.inputAnswers.push("");
     }
+
+    this.inputAnswer.nativeElement.focus();
 
   }
 

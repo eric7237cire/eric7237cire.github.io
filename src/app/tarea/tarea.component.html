@@ -18,9 +18,9 @@
   <ng-container *ngFor="let item of [].constructor(this.inputAnswers.length); let i = index ">
     <label style="grid-column: 1">{{i+1}}.  {{tarea.preguntas[problemNumber].repuestas[i].indicio}}</label>
     <input
+      #inputans
       style="grid-column: 2"
       (keyup.enter)="handleEvaluateAnswers()"
-      autofocus
       class="form-control spanish-input font-mono"
       data-testid="spanish-attempt"
       [ngModel]="inputAnswers[i]" (ngModelChange)="handleSpanishInputChange($event, i)"
