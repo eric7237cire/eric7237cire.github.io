@@ -1,8 +1,10 @@
 <div class="box m-2 gap-x-2">
   <a [routerLink]="[ '/' ]">Root</a>
+  <!--
   <a
     [routerLink]="[ '/', 'data-load' ]">Data Loading</a>
   <a [routerLink]="[ '/', 'trans-test' ]">Translation Test</a>
+  -->
 
   <a [routerLink]="['/', 'tarea']" [queryParams]="{json: '/assets/lessons/por_para.json'}">Por y Para</a>
   <a [routerLink]="['/', 'tarea']" [queryParams]="{json: '/assets/lessons/pasado_imp_ind.json'}">Pasado</a>
