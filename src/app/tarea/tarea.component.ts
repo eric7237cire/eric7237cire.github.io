@@ -138,7 +138,7 @@ export class TareaComponent implements OnInit {
 
   handleSpanishInputChange(spanishInput: string, answerIndex: number) {
 
-    this.inputAnswers[answerIndex] = spanishInput;
+    this.inputAnswers[answerIndex] = spanishInput.toLocaleUpperCase();
 
   }
 
@@ -155,7 +155,7 @@ export class TareaComponent implements OnInit {
 
     for(let i = 0; i < this.lastInputAnswers.length; ++i) {
       const spanishAttemptLetters = getUpperCaseLettersAndMapping(this.lastInputAnswers[i]);
-      const answerLetters = getUpperCaseLettersAndMapping(currentProblem.repuestas[i].repuesta);
+      const answerLetters = getUpperCaseLettersAndMapping(currentProblem.repuestas[i].repuesta.toLocaleUpperCase());
 
       if (spanishAttemptLetters.cleanText == answerLetters.cleanText) {
         numCorrect += 1;

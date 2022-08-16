@@ -18,7 +18,7 @@ export function getUpperCaseLettersAndMapping(rawStr: string) : OL_M {
   for (let i = 0; i < rawStr.length; i++) {
     const ch = rawStr.charAt(i);
     if (isLetter(ch)) {
-      onlyLetters.push(ch.toLocaleLowerCase());
+      onlyLetters.push(ch.toLocaleUpperCase());
       mapping.push(i);
       lastWasSpace = false;
     } else {
