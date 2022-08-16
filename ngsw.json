@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1655984093234,
+  "timestamp": 1660639175108,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -35,7 +35,8 @@
         "/assets/icons/icon-384x384.png",
         "/assets/icons/icon-512x512.png",
         "/assets/icons/icon-72x72.png",
-        "/assets/icons/icon-96x96.png"
+        "/assets/icons/icon-96x96.png",
+        "/assets/lessons/por_para.json"
       ],
       "patterns": []
     }
@@ -50,9 +51,10 @@
     "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/lessons/por_para.json": "a074c774225c99cd6efcb17be8dd44de3054e85c",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/index.html": "b2a6bd9b69a2666368047da3528b4f03cacca122",
-    "/main.js": "3635e7b557d052f6b79f0adadf35d2beb6724b40",
+    "/main.js": "17663f27bcf80819c5a7a7600c7b35ce1c6759af",
     "/polyfills.js": "29ad649d991b22be19c314955abdb941f2b7f3e7",
     "/runtime.js": "ed85a4346b574ebffaa26eadedec6164318e83d9",
     "/styles.css": "93acf5ed5e5899ad133de2c89ec37292de376436"

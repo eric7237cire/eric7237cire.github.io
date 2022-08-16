@@ -1,0 +1,70 @@
+{
+  "titulo": "Por y Para",
+  "preguntas": [
+    {
+      "problema": "Mañana _____ la mañana voy a ir al supermercado.",
+      "indicio": "por o para",
+      "repuestas": [
+        {
+          "repuesta": "por",
+          "razón": "tiempo"
+        }
+      ]
+    },
+    {
+      "problema": "Compré una docena de huevos _____ 3 dólares _____ hacer una tortilla ______ mis amigos.",
+      "indicio": "por o para",
+      "repuestas": [
+        {
+          "repuesta": "por",
+          "razón": "intercambio"
+        },
+        {
+          "repuesta": "para",
+          "razón": "finalidad, antes un infinitivo"
+        },
+        {
+          "repuesta": "para",
+          "razón": "finalidad / objectivo"
+        }
+      ]
+    },
+    {
+      "problema": "Quiero ir a la playa _____ tomar sol y _____ broncearme.",
+      "indicio": "por o para",
+      "repuestas": [
+        {
+          "repuesta": "para",
+          "razón": "finalidad, antes un infinitivo"
+        },
+        {
+          "repuesta": "para",
+          "razón": "finalidad, antes un infinitivo"
+        }
+      ]
+    },
+    {
+      "problema": "Di un paseo _____ la playa.",
+      "indicio": "por o para",
+      "repuestas": [
+        {
+          "repuesta": "por",
+          "razón": "Lugar"
+        }
+      ]
+    },
+    {
+      "problema": "Este regalo es _____ mi marido.",
+      "indicio": "por o para",
+      "repuestas": [
+        {
+          "repuesta": "para",
+          "razón": "Finalidad"
+        }
+      ]
+    }
+  ]
+}
+
+
+
