@@ -1,0 +1,104 @@
+{
+  "titulo": "El imperfecto y el indefinido",
+  "preguntas": [
+    {
+      "problema": "El vendedor de humo ______ un vehículo del que ______ un extraño humo morado. ______ a un pequeño pueblo que ______ desierto. En la calle solo ______ un perro y un gato que ______ por un pescado.",
+      "repuestas": [
+        {
+          "indicio": "conducir",
+          "repuesta": "conducía",
+          "razón": "Una descripción"
+        },
+        {
+          "indicio": "salir",
+          "repuesta": "salía",
+          "razón": "Una descripción"
+        },
+        {
+          "indicio": "Llegar",
+          "repuesta": "Llegó",
+          "razón": "Acción"
+        },
+        {
+          "indicio": "parecer",
+          "repuesta": "parecía",
+          "razón": "Una descripción"
+        },
+        {
+          "indicio": "haber",
+          "repuesta": "había",
+          "razón": "Una descripción"
+        },
+        {
+          "indicio": "pelear",
+          "repuesta": "peleaban",
+          "razón": "Una descripción"
+        }
+      ]
+    },
+    {
+      "problema": "El hombre _______ tan rápido que _______ al perro sin darse cuenta.  Cuando _______, ________ su espectáculo en la plaza del pueblo.  _______ muy contento porque _______ que el pueblo _______ muy bonito.",
+      "repuestas": [
+        {
+          "indicio": "ir",
+          "repuesta": "iba",
+          "razón": "Una descripción"
+        },
+        {
+          "indicio": "atropellar",
+          "repuesta": "atropelló",
+          "razón": "Una descripción"
+        },
+        {
+          "indicio": "llegar",
+          "repuesta": "llegó",
+          "razón": "Acción"
+        },
+        {
+          "indicio": "instalar",
+          "repuesta": "instaló",
+          "razón": "Acción"
+        },
+        {
+          "indicio": "estar",
+          "repuesta": "estaba",
+          "razón": "Una descripción"
+        },
+        {
+          "indicio": "saber",
+          "repuesta": "sabía",
+          "razón": "Una descripción"
+        },
+        {
+          "indicio": "ser",
+          "repuesta": "era",
+          "razón": "Una descripción"
+        }
+      ]
+    },
+    {
+      "problema": "Pero en la plaza no ______ casi nadie. Solo una anciana que ____ papas y un hombre que ____ con el perro por su pescado.",
+      "repuestas": [
+        {
+          "indicio": "haber",
+          "repuesta": "había",
+          "razón": "Una descripción"
+        },
+        {
+          "indicio": "pelar",
+          "repuesta": "pelaba",
+          "razón": "Una descripción"
+        },
+        {
+          "indicio": "discutir",
+          "repuesta": "discutía",
+          "razón": "Una descripción"
+        }
+      ]
+    }
+
+  ]
+}
+
+
+
