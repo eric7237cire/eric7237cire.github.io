@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {verboseRegExp} from "../util/misc";
 import {LoggerService} from "../services/logger.service";
 import {Subject, takeUntil} from "rxjs";
@@ -31,7 +31,8 @@ interface Answer {
 @Component({
   selector: 'app-tarea',
   templateUrl: './tarea.component.html',
-  styleUrls: ['./tarea.component.css']
+  styleUrls: ['./tarea.component.css'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class TareaComponent implements OnInit {
 
@@ -153,11 +154,15 @@ export class TareaComponent implements OnInit {
 
     }
 
-    this.lastScore = `${numCorrect} / ${this.lastInputAnswers.length} cierto`;
 
     if (numCorrect == this.lastInputAnswers.length) {
       this.correct.add(this.problemNumber);
     }
+
+    const remaining = this.tarea.preguntas.length - this.correct.size;
+
+    this.lastScore = `${numCorrect} / ${this.lastInputAnswers.length} cierto.  Le quedan ${remaining} problemas.`;
+
 
     for(let i = 0; i < this.tarea.preguntas.length; ++i) {
       this.problemNumber += 1;
@@ -174,46 +179,6 @@ export class TareaComponent implements OnInit {
     this.handleProblemNumberChanged(this.problemNumber);
   }
 
-  // finishSpanishAttempt() {
-  //
-  //
-  //
-  //   const score = getScore(this.spanishAttempt, this.spanishText);
-  //
-  //   this.lastScore = `Score is %${score.toFixed(2)}`;
-  //
-  //   this.attempts.push( {
-  //     lessonNumber: this.lessonNumber, score, sentenceNumber: this.sentenceNumber, spanishAttempt: ""
-  //   });
-  //
-  //   this.lastAttempt = this.spanishAttempt;
-  //   this.lastAnswer = getPuncWordArray(this.spanishText);
-  //
-  //   console.log("Last Answer: ", this.lastAnswer);
-  //
-  //   const spanishAttemptLetters = getUpperCaseLettersAndMapping(this.spanishAttempt);
-  //   const answerLetters = getUpperCaseLettersAndMapping(this.spanishText);
-  //
-  //   const dmp = new DiffMatchPatch();
-  //   const diffResults = dmp.diff_main(spanishAttemptLetters.cleanText, answerLetters.cleanText);
-  //   console.log("Diff results", diffResults);
-  //   console.log("Parsed", answerLetters.mapping, answerLetters.cleanText, answerLetters.rawText);
-  //   this.diffHtml = this.sanitizer.bypassSecurityTrustHtml(diffPrettyHtml(diffResults, answerLetters));
-  //
-  //
-  //   if (score < 100) {
-  //     this.nextSentenceNumbers.push(this.sentenceNumber);
-  //   }
-  //
-  //   this.sentenceNumber = this.nextSentenceNumbers[0];
-  //   this.nextSentenceNumbers.splice(0, 1);
-  //
-  //   this.lastScore += ` Remaining: ${this.nextSentenceNumbers.length}`;
-  //
-  //
-  //   this.spanishAttempt = "";
-  //
-  //   this.handleSentenceNumberChanged();
-  // }
+
 
 }
