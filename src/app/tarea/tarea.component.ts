@@ -52,6 +52,7 @@ export class TareaComponent implements OnInit {
   lastProblems: Array<Array<string>> = [];
   lastInputAnswers: Array<string> = [];
   lastAnswers: Array<Answer> = [];
+  lastQuestion = "";
   scoreText = "";
 
   lessons: Array<Lesson> = [];
@@ -149,6 +150,8 @@ export class TareaComponent implements OnInit {
     this.diffHtml = [];
 
     const currentProblem = this.tarea.preguntas[this.problemNumber];
+    this.lastQuestion = currentProblem.problema;
+    
     const dmp = new DiffMatchPatch();
 
     let numCorrect = 0;
