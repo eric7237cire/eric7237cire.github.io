@@ -32,7 +32,7 @@
         {
           "repuesta": "era",
           "razón": "Una descripción",
-          "indicio": "ESTAR"
+          "indicio": "SER"
         }
       ]
     },
@@ -40,7 +40,7 @@
       "problema": "Les ofreció unas semillas.  Pero aun así, ellos no _____ saber nada.  El espantapájaros se preguntaba por qué nadie quería ser su amigo.  Así pasó el tiempo hasta que una noche fría _____ a sus pies un cuervo ciego.  ",
       "repuestas": [
         {
-          "repuesta": "Queríamos (?)",
+          "repuesta": "Quisimos",
           "razón": "",
           "indicio": "QUERER"
         },
@@ -80,7 +80,7 @@
           "indicio": "QUEDARSE"
         },
         {
-          "repuesta": "quería ?",
+          "repuesta": "quería",
           "razón": "",
           "indicio": "QUERER"
         }
@@ -90,7 +90,7 @@
       "problema": "Aterrorizado, el amo despertó a todos los vecinos.  Les contó que su espantapájaros _____ vida y que esto sólo podía ser obra del diablo.  Cerca del molino estaba el cuervo ciego.  Sus compañeros le explicaron que los vecinos de la aldea _____ quemando un molino donde se intentaba esconder un espantapájaros con una bufanda muy larga.  ",
       "repuestas": [
         {
-          "repuesta": "cobró ?",
+          "repuesta": "cobró",
           "razón": "",
           "indicio": "COBRAR"
         },
