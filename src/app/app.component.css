@@ -2,9 +2,24 @@ a {
    @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
 }
 
+.wrapper {
+  display: block;
+  width: auto;
+  margin: 40px;
+}
+
 .box {
 
     display: flex;
     flex-direction: row;
 
+    overflow-x: scroll;
+
+    column-gap: 0.5rem;
+    
+}
+
+.contents {
+  display: block;
+  width: auto;
 }

@@ -107,8 +107,9 @@ export class TareaComponent implements OnInit {
         this.correct = new Set<number>();
         this.diffHtml = [];
         this.lastInputAnswers = [];
-
+        
         this.handleProblemNumberChanged(0);
+        
       });
     });
 
@@ -129,7 +130,10 @@ export class TareaComponent implements OnInit {
       this.inputAnswers.push("");
     }
 
-    this.inputAnswer.nativeElement.focus();
+    //We want to wait for this to render
+    setTimeout( () => {
+      this.inputAnswer.nativeElement.focus();
+    }, 15);
 
   }
 
