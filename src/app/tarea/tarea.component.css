@@ -61,17 +61,17 @@ del {
 
 .test-grid {
   display: grid;
-  grid-template-columns: minmax(200px, min-content) 1fr;
+  grid-template-columns: minmax(100px, min-content) 1fr;
   margin: 0.5rem;
   gap: 1rem;
 }
 
 .answer-grid {
   display: grid;
-  grid-template-columns: minmax(200px, max-content) 1fr;
+  grid-template-columns: minmax(100px, max-content) 1fr;
   background-color: lightblue;
   background-clip: content-box;
-  margin-left: 20px;
+  margin-left: 4px;
   margin-bottom: 20px;
   border-radius: 6px;
 }
