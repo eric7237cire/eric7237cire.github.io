@@ -223,7 +223,7 @@
       ]
     },
     {
-      "problema": "Por eso, mi abuelo _____ la fábrica también y _____ a ayudar a mi abuela con la pequeña tienda que años más tarde _____ en la fábrica más grande de la región.  ",
+      "problema": "Por eso, mi abuelo _____ la fábrica también y _____ a ayudar a mi abuela con la pequeña tienda que años más tarde _____ en la fábrica más grande de la región.  Ahora mis abuelos son muy ricos y están jubilados, pero mi abuela todavía hace conservas muy buenas.",
       "repuestas": [
         {
           "repuesta": "dejó",
@@ -241,10 +241,6 @@
           "indicio": "convertirse"
         }
       ]
-    },
-    {
-      "problema": "Ahora mis abuelos son muy ricos y están jubilados, pero mi abuela todavía hace conservas muy buenas.  ",
-      "repuestas": []
     }
   ]
 }
