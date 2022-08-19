@@ -161,8 +161,8 @@ export class TareaComponent implements OnInit {
     let numCorrect = 0;
 
     for(let i = 0; i < this.lastInputAnswers.length; ++i) {
-      const spanishAttemptLetters = getUpperCaseLettersAndMapping(this.lastInputAnswers[i]);
-      const answerLetters = getUpperCaseLettersAndMapping(currentProblem.repuestas[i].repuesta.toLocaleUpperCase());
+      const spanishAttemptLetters = getUpperCaseLettersAndMapping(this.lastInputAnswers[i].trim());
+      const answerLetters = getUpperCaseLettersAndMapping(currentProblem.repuestas[i].repuesta.toLocaleUpperCase().trim());
 
       if (spanishAttemptLetters.cleanText == answerLetters.cleanText) {
         numCorrect += 1;
