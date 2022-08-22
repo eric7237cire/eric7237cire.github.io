@@ -154,8 +154,8 @@
       "problema": "¿Cuánto pagaste _____ este cuadro?  ",
       "repuestas": [
         {
-          "repuesta": "para",
-          "razón": "finalidad?",
+          "repuesta": "por",
+          "razón": "causa, intercambio",
           "indicio": "por o para"
         }
       ]
