@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {StorageService} from "../services/storage.service";
 import {environment} from "../../environments/environment";
+import {SwUpdate, VersionReadyEvent} from "@angular/service-worker";
+import {filter, map} from "rxjs";
 
 @Component({
   selector: 'app-spanish-root',
@@ -16,7 +18,9 @@ export class SpanishRootComponent implements OnInit {
   commitRefName = environment.commitRefName
   commitTime = environment.commitTime
 
-  constructor(private storageService: StorageService) { }
+  constructor(private storageService: StorageService,
+              private swUpdate: SwUpdate) {
+  }
 
   async ngOnInit() {
     await this.storageService.ensureCreated();
@@ -24,6 +28,19 @@ export class SpanishRootComponent implements OnInit {
     this.numSentences = (await this.storageService.retrieveSentences()).length;
 
     console.log(`ngOnInit -- commitTime ${environment.commitTime}`);
+
+    if (this.swUpdate.isEnabled) {
+
+      this.swUpdate.versionUpdates.pipe(
+        filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
+        map(evt => ({
+          type: 'UPDATE_AVAILABLE',
+          current: evt.currentVersion,
+          available: evt.latestVersion,
+        }))).subscribe(() => {
+        window.location.reload();
+      });
+    }
   }
 
 }

@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
 # python3 src/assets/create_lesson.py
-
+import sys
 from pathlib import Path
 import re
 
@@ -146,50 +147,98 @@ Tenemos clase_por (tiempo)______ la tarde.
 Tengo hambre, me doy cuenta por (medio)__ el ruido que hace mi panza.
 """
 
+raw_text = r"""
+01.- Cuando llegué al aeropuerto l avión ya  ______________ . (salir) [HABÍA SALIDO]
+02.- Mi hermano aún no   _______________ (llegar) [HABÍA LLEGADO] cuando comenzó la fiesta.
+03.- Ellos nos  _________________ (dar) [HABÍAN DADO] mucha fruta para que la lleváramos al picnic.
+05.- Nosotros no_____________________  (hablar) [HABÍAMOS HABLADO] con él antes de leer su historia.
+06.- Yo nunca ____________________  un auto. (manejar) [HABÍA MANEJADO]
+08.- Cuando llegúe a casa, tú aún no te____________________   (levantar) [HABÍAS LEVANTADO].
+10.- Susana me lo ____________________ (pedir) [HABÍA PEDIDO] antes a mí.
+01.- Ellos aún no__________   el libro. (abrir) [HABÍAN ABIERTO]
+02.- Yo ya_________   mi cama. (hacer) [HABÍA HECHO]
+03.- Los turistas aún no___________  . (volver) [HABÍAN VUELTO]
+05.-Alguien nos _________  la fecha. (decir) [HABÍA DICHO]
+06.- El jugador__________   una pierna. (romperse) [SE HABÍA ROTO]
+07.- ¿Quién ____________  la señal allí? (poner) [HABÍA PUESTO]
+08.- La nieve  ________ el campo. (cubrir) [HABÍA CUBIERTO]
+09.- ¿ ___________ vos esa carta? (escribir) [HABÍAS ESCRITO]
+1. Yo ya  _______(barrer) la cocina. [HABÍA BARRIDO]
+2. Los chicos ya  ___________(pasar) la aspiradora a la alfombra. [HABÍAN PASADO]
+3. Roberto ya _________ (hacer) la comida. [HABÍA HECHO]
+4. Elsa y yo ya ________ (planchar) la ropa. [HABÍAN PLANCHADO]
+5. Vos ya  ________(limpiar) la heladera. [HABÍAS LIMPIADO]
+6. Carmen y Elena ya ___________ (bañar) al perro. [HABÍAS BAÑADO]
+7. Anita ya le__________  (poner) la mesa. [HABÍA PUESTO]
+8. Raúl y Carlos ya ____________ (comprar) la comida. [HABÍA COMPRADO]
+"""
+
 sentence_pattern = re.compile(r"""
 (?<=[!\.?]) # Look behind assertion because we want to keep the sentence ending
 \s+
 """, re.VERBOSE | re.DOTALL)
 
-# hint after __
-answer_pattern = re.compile(r"""
-\_{3,}  # some underlines, at least 3
-\s* # some spaces
-\( # opening
-([^)]*) #hint in ()
-\) # closing
-""", re.VERBOSE | re.DOTALL)
-
-# hint before
-answer_pattern = re.compile(r"""
-\( # opening
-([^)]*) #hint in ()
-\) # closing
-\s* # some spaces
-\_{3,}  # some underlines, at least 3
-
-""", re.VERBOSE | re.DOTALL)
-
-# hint before  with answer
-answer_pattern = re.compile(r"""
-\( # opening
-([^)]*) #hint in ()
-\) # closing
-\s* # some spaces
+sentence_pattern = re.compile(r"""
 \n
-([^\n]*)  # some underlines, at least 3
-\n
+""", re.VERBOSE | re.DOTALL)
 
+strip_pattern = re.compile(r"""
+\d+
+\.
+-?
 """, re.VERBOSE | re.DOTALL)
 
 answer_pattern = re.compile(r"""
-_+ # some underlines
-([^(]*) # answer
-\( # opening
-([^)]*) #reason in ()
-\) # closing
-_+
+\[(.*)\]
 """, re.VERBOSE | re.DOTALL)
+
+hint_pattern = re.compile(r"""
+\(
+(.*)
+\)
+""", re.VERBOSE | re.DOTALL)
+
+
+def old_code():
+  # hint after __
+  answer_pattern = re.compile(r"""
+  \_{3,}  # some underlines, at least 3
+  \s* # some spaces
+  \( # opening
+  ([^)]*) #hint in ()
+  \) # closing
+  """, re.VERBOSE | re.DOTALL)
+
+  # hint before
+  answer_pattern = re.compile(r"""
+  \( # opening
+  ([^)]*) #hint in ()
+  \) # closing
+  \s* # some spaces
+  \_{3,}  # some underlines, at least 3
+
+  """, re.VERBOSE | re.DOTALL)
+
+  # hint before  with answer
+  answer_pattern = re.compile(r"""
+  \( # opening
+  ([^)]*) #hint in ()
+  \) # closing
+  \s* # some spaces
+  \n
+  ([^\n]*)  # some underlines, at least 3
+  \n
+
+  """, re.VERBOSE | re.DOTALL)
+
+  answer_pattern = re.compile(r"""
+  _+ # some underlines
+  ([^(]*) # answer
+  \( # opening
+  ([^)]*) #reason in ()
+  \) # closing
+  _+
+  """, re.VERBOSE | re.DOTALL)
 
 import json
 
@@ -207,19 +256,23 @@ current_answers = []
 for sentence in sentences:
   print(f"Sentence: {sentence}")
 
+  hm = hint_pattern.search(sentence)
   for m in answer_pattern.finditer(sentence):
     print(m)
     current_answers.append({
       "repuesta": m.group(1).strip(),
-      "razón": m.group(2),
-      "indicio": "por o para"
+      "razón": "",
+      "indicio": hm.group(1)
     })
 
-  no_hints = answer_pattern.sub("_____", sentence)
+  no_hints = sentence
+  no_hints = strip_pattern.sub("", no_hints)
+  no_hints = hint_pattern.sub("", no_hints)
+  no_hints = answer_pattern.sub("", no_hints)
 
   print(f"No hints: {no_hints}")
 
-  current_problema += no_hints + "  "
+  current_problema += no_hints.strip() #+ "  "
 
   if len(current_answers) >= 1:
     preguntas.append({
@@ -236,4 +289,4 @@ if len(current_answers) >= 0:
       "repuestas": current_answers
     })
 
-print(json.dumps(preguntas, indent = 2, ensure_ascii=False))
+sys.stdout.buffer.write(json.dumps(preguntas, indent = 2, ensure_ascii=False).encode("utf8"))
