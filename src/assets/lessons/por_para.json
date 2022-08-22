@@ -69,6 +69,106 @@
           "indicio": "por o para"
         }
       ]
+    },
+    {
+      "problema": "Rosa viene a Buenos Aires en verano _____ ver a sus abuelos.  ",
+      "repuestas": [
+        {
+          "repuesta": "para",
+          "razón": "finalidad",
+          "indicio": "por o para"
+        }
+      ]
+    },
+    {
+      "problema": "¿Cuántas veces _____ semana vas al gimnasio?  ",
+      "repuestas": [
+        {
+          "repuesta": "por",
+          "razón": "tiempo",
+          "indicio": "por o para"
+        }
+      ]
+    },
+    {
+      "problema": "Compré una tarta _____ Carmen.  ",
+      "repuestas": [
+        {
+          "repuesta": "para",
+          "razón": "finalidad",
+          "indicio": "por o para"
+        }
+      ]
+    },
+    {
+      "problema": "Quiero ir a Sierra Nevada _____ esquiar.  ",
+      "repuestas": [
+        {
+          "repuesta": "para",
+          "razón": "finalidad",
+          "indicio": "por o para"
+        }
+      ]
+    },
+    {
+      "problema": "Miguel compró una torta _____ su sobrino.  ",
+      "repuestas": [
+        {
+          "repuesta": "para",
+          "razón": "finalidad",
+          "indicio": "por o para"
+        }
+      ]
+    },
+    {
+      "problema": "Necesito mis ahorros_____ comprar un auto nuevo.  ",
+      "repuestas": [
+        {
+          "repuesta": "para",
+          "razón": "finalidad",
+          "indicio": "por o para"
+        }
+      ]
+    },
+    {
+      "problema": "_____ la noche estudio mejor; estoy más tranquilo.  ",
+      "repuestas": [
+        {
+          "repuesta": "Por",
+          "razón": "tiempo",
+          "indicio": "por o para"
+        }
+      ]
+    },
+    {
+      "problema": "Tenemos clase _____ la tarde.  ",
+      "repuestas": [
+        {
+          "repuesta": "por",
+          "razón": "tiempo",
+          "indicio": "por o para"
+        }
+      ]
+    },
+    {
+      "problema": "¿Cuánto pagaste _____ este cuadro?  ",
+      "repuestas": [
+        {
+          "repuesta": "para",
+          "razón": "finalidad?",
+          "indicio": "por o para"
+        }
+      ]
+    },
+    {
+      "problema": "Tengo hambre, me doy cuenta _____ el ruido que hace mi panza.  ",
+      "repuestas": [
+         {
+          "repuesta": "por",
+          "razón": "medio",
+          "indicio": "por o para"
+        }
+      ]
     }
   ]
 }

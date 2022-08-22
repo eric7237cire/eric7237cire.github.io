@@ -2,13 +2,14 @@
   <div class="box">
 
     <!--
-    <a [routerLink]="[ '/' ]">Root</a>
+
     <a
       [routerLink]="[ '/', 'data-load' ]">Data Loading</a>
     <a [routerLink]="[ '/', 'trans-test' ]">Translation Test</a>
     -->
-
+    <a [routerLink]="[ '/' ]">Root</a>
     <a [routerLink]="['/', 'tarea']" [queryParams]="{json: '/assets/lessons/por_para.json'}">Por y Para</a>
+    <a [routerLink]="['/', 'tarea']" [queryParams]="{json: '/assets/lessons/por_para_2.json'}">Por y Para 2</a>
     <a [routerLink]="['/', 'tarea']" [queryParams]="{json: '/assets/lessons/pasado_imp_ind.json'}">Pasado</a>
     <a [routerLink]="['/', 'tarea']" [queryParams]="{json: '/assets/lessons/pasado_esp_pajaros.json'}">Pasado Espantapájaros</a>
     <a [routerLink]="['/', 'tarea']" [queryParams]="{json: '/assets/lessons/imperfecto_indefinido.json'}">Imperfecto o indefinido</a>
