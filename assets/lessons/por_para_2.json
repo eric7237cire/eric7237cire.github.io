@@ -1,0 +1,211 @@
+{
+  "titulo": "Por y Para",
+  "preguntas": [
+    {
+    "problema": "No hay receta _____ encontrar la felicidad.  ",
+    "repuestas": [
+      {
+        "repuesta": "para",
+        "razón": "finalidad",
+        "indicio": "por o para"
+      }
+    ]
+  },
+    {
+    "problema": "El libro La Insoportable Levedad del Ser fue escrito _____ Milan Kundera.",
+    "repuestas": [
+
+      {
+        "repuesta": "por",
+        "razón": "autor",
+        "indicio": "por o para"
+      }
+    ]
+  },
+    {
+    "problema": "Fui al supermercado _____ comprar papel higiénico.",
+    "repuestas": [
+      {
+        "repuesta": "para",
+        "razón": "finalidad",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "Pero _____ culpa de la desesperación de la gente, no había más.  ",
+    "repuestas": [
+      {
+        "repuesta": "por",
+        "razón": "causa",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "_______ mañana necesito terminar este trabajo.  ",
+    "repuestas": [
+      {
+        "repuesta": "para",
+        "razón": "fecha limité",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "Vendí mi casa _____ USD 90.000.  ",
+    "repuestas": [
+      {
+        "repuesta": "por",
+        "razón": "intercambio",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "Para llegar al bosque, tenés que caminar _____ el sendero más angosto y luego _____ el sendero más ancho.  ",
+    "repuestas": [
+      {
+        "repuesta": "por",
+        "razón": "lugar",
+        "indicio": "por o para"
+      },
+      {
+        "repuesta": "por",
+        "razón": "lugar",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "_____ detener el Coronavirus tenemos que quedarnos en nuestras casas.  ",
+    "repuestas": [
+      {
+        "repuesta": "Para",
+        "razón": "finalidad",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "Igualmente, la cuarentena no se puede sostener _____ mucho tiempo.  ",
+    "repuestas": [
+      {
+        "repuesta": "por",
+        "razón": "tiempo",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "Él trabaja con datos suministrados ____ el Ministerio de Salud.",
+    "repuestas": [
+      {
+        "repuesta": "por",
+        "razón": "Medio de comunicación",
+        "indicio": "por o para"
+      }
+    ]
+  },
+    {
+    "problema": "Convierte la información en instrumentos _____ comprender el virus.  ",
+    "repuestas": [
+      {
+        "repuesta": "para",
+        "razón": "finalidad",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "Y es _____ esa razón que ahora entendemos mejor al virus.  ",
+    "repuestas": [
+      {
+        "repuesta": "por",
+        "razón": "causa",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "Las naciones europeas y nórdicas pueden servir de ejemplo _____ saber qué es lo que hay o no hay que hacer.  ",
+    "repuestas": [
+      {
+        "repuesta": "para",
+        "razón": "finalidad",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "Todas las personas que mueren _____ una infección respiratoria deben ser testeadas _____ ver la causa real de la infección.  ",
+    "repuestas": [
+      {
+        "repuesta": "por",
+        "razón": "medio",
+        "indicio": "por o para"
+      },
+      {
+        "repuesta": "para",
+        "razón": "finalidad",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "Hay que actuar rápido _____ poner fin a este virus.  ",
+    "repuestas": [
+      {
+        "repuesta": "para",
+        "razón": "finalidad",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "Un dato clave _____ comprender la propagación es prestar atención a la tasa de variación.  ",
+    "repuestas": [
+      {
+        "repuesta": "para",
+        "razón": "finalidad",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "_____ terminar con la epidemia la tasa de reproducción tiene que estar _____ debajo de 1.",
+    "repuestas": [
+      {
+        "repuesta": "Para",
+        "razón": "finalidad",
+        "indicio": "por o para"
+      },
+      {
+        "repuesta": "por",
+        "razón": "distribución",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "La gente prefiere no salir de su casa _____ ir al supermercado.  ",
+    "repuestas": [
+      {
+        "repuesta": "para",
+        "razón": "dirección",
+        "indicio": "por o para"
+      }
+    ]
+  },
+  {
+    "problema": "En Alemania, las personas pueden reunirse con una persona _____ día.  ",
+    "repuestas": [
+      {
+        "repuesta": "por",
+        "razón": "tiempo",
+        "indicio": "por o para"
+      }
+    ]
+  }
+  ]
+}

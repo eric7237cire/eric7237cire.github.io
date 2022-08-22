@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1660900921459,
+  "timestamp": 1661154133293,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -44,6 +44,7 @@
         "/assets/lessons/pasado_esp_pajaros.json",
         "/assets/lessons/pasado_imp_ind.json",
         "/assets/lessons/por_para.json",
+        "/assets/lessons/por_para_2.json",
         "/assets/lessons/sources.md"
       ],
       "patterns": []
@@ -51,7 +52,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/assets/create_lesson.py": "8daa5065e916357088e2249bfabc73f82ca7f9de",
+    "/assets/create_lesson.py": "632ca97ac0458e2a3f6b7574c0af215ae356d085",
     "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -66,11 +67,12 @@
     "/assets/lessons/imperfecto_indefinido_2.json": "ba36a31bd4df3baaa495c0bc4956b9d39310b9ef",
     "/assets/lessons/pasado_esp_pajaros.json": "933f243cb07eaf74dceffc29bb79ce7582f2b82a",
     "/assets/lessons/pasado_imp_ind.json": "5b7995e26223fd85cb8a841275985336a38df0f4",
-    "/assets/lessons/por_para.json": "f9b7de44acf95ff9734b052cff75fba287a04e9b",
+    "/assets/lessons/por_para.json": "ebe2b3da585932539e3a8aa9d0eeca92edd82b18",
+    "/assets/lessons/por_para_2.json": "51b0068dbadb44e1bcc4e15ba6e0350765ea7c47",
     "/assets/lessons/sources.md": "c334e597260d66519994b238df0735685c042fab",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/index.html": "f1b43eb75770af363a5eeecaa56b4c8f99b76291",
-    "/main.js": "8c59a86fb3c2b8e2b88a3d95f9f2a39f3a5c1906",
+    "/main.js": "1c3cfe065cd63f9cfb76992ac0853817265f851d",
     "/polyfills.js": "29ad649d991b22be19c314955abdb941f2b7f3e7",
     "/runtime.js": "ed85a4346b574ebffaa26eadedec6164318e83d9",
     "/styles.css": "508fd0b6d6a59f0f6bfa217c3deda278b188db91"
