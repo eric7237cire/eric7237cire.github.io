@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1661172572118,
+  "timestamp": 1661508716061,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -37,6 +37,7 @@
         "/assets/icons/icon-512x512.png",
         "/assets/icons/icon-72x72.png",
         "/assets/icons/icon-96x96.png",
+        "/assets/lessons/english_1.json",
         "/assets/lessons/imp_egipcios.json",
         "/assets/lessons/imp_ind_3.json",
         "/assets/lessons/imperfecto_indefinido.json",
@@ -62,6 +63,7 @@
     "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/lessons/english_1.json": "495cd941a9e1f8131ba6129fb6e1a952370731fd",
     "/assets/lessons/imp_egipcios.json": "70a4f663237c7b14d66a6f4c26fa01ae3be09ca5",
     "/assets/lessons/imp_ind_3.json": "7d2a5445310e9c388e5464d81e392a251475514a",
     "/assets/lessons/imperfecto_indefinido.json": "d85838fa4f6b752e557979a34b5c732a7affb3c6",
@@ -74,7 +76,7 @@
     "/assets/lessons/sources.md": "c334e597260d66519994b238df0735685c042fab",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/index.html": "f1b43eb75770af363a5eeecaa56b4c8f99b76291",
-    "/main.js": "23c6b19397716af856782681594751f3c2aa69e4",
+    "/main.js": "9e75714dcf20b82c4e18b26c31de2a2866a695a8",
     "/polyfills.js": "29ad649d991b22be19c314955abdb941f2b7f3e7",
     "/runtime.js": "ed85a4346b574ebffaa26eadedec6164318e83d9",
     "/styles.css": "508fd0b6d6a59f0f6bfa217c3deda278b188db91"
