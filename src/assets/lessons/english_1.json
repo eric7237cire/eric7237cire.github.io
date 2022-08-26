@@ -1,0 +1,46 @@
+{
+  "titulo": "Translating english",
+  "description": "Ejercicio para practicar el pretérito imperfecto de indicativo.  Completa con los verbos en pretérito imperfecto.",
+  "preguntas": [
+    {
+      "problema": "I should have done that.  Yo ______ _____ hecho eso",
+      "repuestas": [
+        {
+          "repuesta": "debería",
+          "razón": "",
+          "indicio": ""
+        },
+        {
+          "repuesta": "haber",
+          "razón": "",
+          "indicio": ""
+        }
+      ]
+    },
+    {
+      "problema": "I would have done that.  Yo ______ hecho eso",
+      "repuestas": [
+        {
+          "repuesta": "hubiera",
+          "razón": "",
+          "indicio": ""
+        }
+      ]
+    },
+    {
+      "problema": "I could have done that.  Yo ______ ______ hecho eso",
+      "repuestas": [
+        {
+          "repuesta": "podría",
+          "razón": "",
+          "indicio": ""
+        },
+        {
+          "repuesta": "haber",
+          "razón": "",
+          "indicio": ""
+        }
+      ]
+    }
+  ]
+}
