@@ -1,0 +1,106 @@
+{
+  "titulo": "Expresiones con si",
+  "description": "",
+  "preguntas": [
+    {
+      "problema": "Hipótesis futura posible -- Si _____ conmigo, te lo ______ todo",
+      "repuestas": [
+        {
+          "repuesta": "vienes",
+          "razón": "",
+          "indicio": "venir"
+        },
+        {
+          "repuesta": "contaré",
+          "razón": "",
+          "indicio": "contar"
+        }
+      ]
+    },
+    {
+      "problema": "Hipótesis futura posible -- Como _____ conmigo, te lo ______ todo",
+      "repuestas": [
+        {
+          "repuesta": "vengas",
+          "razón": "",
+          "indicio": "venir"
+        },
+        {
+          "repuesta": "contaré",
+          "razón": "",
+          "indicio": "contar"
+        }
+      ]
+    },
+    {
+      "problema": "Hipótesis presente imposible -- Si _____ conmigo, te lo ______ todo",
+      "repuestas": [
+        {
+          "repuesta": "vinieras",
+          "razón": "",
+          "indicio": "venir"
+        },
+        {
+          "repuesta": "contaría",
+          "razón": "",
+          "indicio": "contar"
+        }
+      ]
+    },
+    {
+      "problema": "Hipótesis pasado imposible -- Si _____ conmigo, te lo ______ todo",
+      "repuestas": [
+        {
+          "repuesta": "hubieras venido",
+          "razón": "",
+          "indicio": "venir"
+        },
+        {
+          "repuesta": "habría contado",
+          "razón": "",
+          "indicio": "contar"
+        }
+      ]
+    },
+    {
+      "problema": "Hipótesis pasado imposible (no lo hiciste, pero haberlo hecho o no habría marcado la diferencia) -- Aunque _____ conmigo, no te lo ______ nada",
+      "repuestas": [
+        {
+          "repuesta": "hubieras venido",
+          "razón": "",
+          "indicio": "venir"
+        },
+        {
+          "repuesta": "habría dicho",
+          "razón": "",
+          "indicio": "decir"
+        }
+      ]
+    },
+    {
+      "problema": "La reunión de ayer con los clientes fue un éxito.  Sí, pero aunque _____ un éxito, tuvimos que ceder demasiado por nuestra parte.",
+      "repuestas": [
+        {
+          "repuesta": "fuera",
+          "razón": "",
+          "indicio": "ser"
+        }
+      ]
+    },
+     {
+      "problema": "-No entiendo por qué el cliente no quiere firmar el contrato.  Yo creo que aunque le _____ más ventajas, no ______ tampoco. Es un cliente muy testarudo.",
+      "repuestas": [
+        {
+          "repuesta": "ofrecieras",
+          "razón": "",
+          "indicio": "ofrecer"
+        },
+        {
+          "repuesta": "firmaría",
+          "razón": "",
+          "indicio": "firmar"
+        }
+      ]
+    }
+  ]
+}
