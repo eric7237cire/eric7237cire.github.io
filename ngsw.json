@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1661508716061,
+  "timestamp": 1661589985901,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -47,6 +47,7 @@
         "/assets/lessons/plus_cuam_perfecto.json",
         "/assets/lessons/por_para.json",
         "/assets/lessons/por_para_2.json",
+        "/assets/lessons/si_1.json",
         "/assets/lessons/sources.md"
       ],
       "patterns": []
@@ -73,10 +74,11 @@
     "/assets/lessons/plus_cuam_perfecto.json": "baec49a4820f42eb77db7778950a672e320bb17c",
     "/assets/lessons/por_para.json": "4f84ad57da0aac3330dff209858f9aeb35d954b0",
     "/assets/lessons/por_para_2.json": "51b0068dbadb44e1bcc4e15ba6e0350765ea7c47",
+    "/assets/lessons/si_1.json": "485f0473cf656bd289d1a48166779b39218aba93",
     "/assets/lessons/sources.md": "c334e597260d66519994b238df0735685c042fab",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/index.html": "f1b43eb75770af363a5eeecaa56b4c8f99b76291",
-    "/main.js": "9e75714dcf20b82c4e18b26c31de2a2866a695a8",
+    "/main.js": "afff1aec32c7a6968ee45bff502fb46f75585e74",
     "/polyfills.js": "29ad649d991b22be19c314955abdb941f2b7f3e7",
     "/runtime.js": "ed85a4346b574ebffaa26eadedec6164318e83d9",
     "/styles.css": "508fd0b6d6a59f0f6bfa217c3deda278b188db91"
