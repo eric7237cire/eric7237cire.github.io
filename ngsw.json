@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1662104506236,
+  "timestamp": 1662105576344,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -43,6 +43,7 @@
         "/assets/lessons/imperfecto_indefinido_2.json",
         "/assets/lessons/imperfecto_indefinido_3.json",
         "/assets/lessons/imperfecto_indefinido_4.json",
+        "/assets/lessons/imperfecto_indefinido_5.json",
         "/assets/lessons/pasado_esp_pajaros.json",
         "/assets/lessons/pasado_imp_ind.json",
         "/assets/lessons/plus_cuam_perfecto.json",
@@ -56,7 +57,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/assets/create_lesson.py": "966db940c3663e1a36188777fe8e6dd17c811f0c",
+    "/assets/create_lesson.py": "0033f4dfd0624a6ecb9e5fe18bb929474f9024d4",
     "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -71,6 +72,7 @@
     "/assets/lessons/imperfecto_indefinido_2.json": "925e7f57e3ecb43b02f7720d933311901d786400",
     "/assets/lessons/imperfecto_indefinido_3.json": "7d2a5445310e9c388e5464d81e392a251475514a",
     "/assets/lessons/imperfecto_indefinido_4.json": "4e20d6512cd06f1f9a953d025eca0c77c1f44caa",
+    "/assets/lessons/imperfecto_indefinido_5.json": "1a9a1aa112d86930ebb1b430931855476ef85ef4",
     "/assets/lessons/pasado_esp_pajaros.json": "3fc89f12a93fa8718f164fea10990d0744a01976",
     "/assets/lessons/pasado_imp_ind.json": "5b7995e26223fd85cb8a841275985336a38df0f4",
     "/assets/lessons/plus_cuam_perfecto.json": "baec49a4820f42eb77db7778950a672e320bb17c",
@@ -80,7 +82,7 @@
     "/assets/lessons/sources.md": "c334e597260d66519994b238df0735685c042fab",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/index.html": "f1b43eb75770af363a5eeecaa56b4c8f99b76291",
-    "/main.js": "b7c5a776d448c04913a472e9eaa8af0927d46356",
+    "/main.js": "ff6d63f44676f2eb3af24983be8dacae03ca4fb9",
     "/polyfills.js": "29ad649d991b22be19c314955abdb941f2b7f3e7",
     "/runtime.js": "ed85a4346b574ebffaa26eadedec6164318e83d9",
     "/styles.css": "508fd0b6d6a59f0f6bfa217c3deda278b188db91"
