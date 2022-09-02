@@ -1,5 +1,4 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ngxLocalStorage} from 'ngx-localstorage';
 import {AnswerAttempt, Lesson} from "../util/interfaces";
 import {StorageService} from "../services/storage.service";
 import {getPuncWordArray, getScore, getUpperCaseLettersAndMapping, getWords, OL_M} from "../util/string";
@@ -14,7 +13,6 @@ import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
 })
 export class TranslationTestComponent implements OnInit {
 
-  @ngxLocalStorage({nullTransformer: () => 0})
   lessonNumber!: number;
 
   sentenceNumber!: number;
@@ -30,7 +28,6 @@ export class TranslationTestComponent implements OnInit {
 
   diffHtml: SafeHtml = "";
 
-  @ngxLocalStorage({nullTransformer: () => ""})
   spanishAttempt!: string;
   scoreText = "";
 

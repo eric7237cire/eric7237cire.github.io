@@ -9,7 +9,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {getPuncWordArray, getScore, getUpperCaseLettersAndMapping, getWords} from "../util/string";
 import {COMMON_WORDS, diffPrettyHtml} from "../translation-test/translation-test.component";
 import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
-import {ngxLocalStorage} from "ngx-localstorage";
 import {DiffMatchPatch} from "diff-match-patch-typescript";
 
 interface Tarea {
@@ -107,9 +106,9 @@ export class TareaComponent implements OnInit {
         this.correct = new Set<number>();
         this.diffHtml = [];
         this.lastInputAnswers = [];
-        
+
         this.handleProblemNumberChanged(0);
-        
+
       });
     });
 
@@ -155,7 +154,7 @@ export class TareaComponent implements OnInit {
 
     const currentProblem = this.tarea.preguntas[this.problemNumber];
     this.lastQuestion = currentProblem.problema;
-    
+
     const dmp = new DiffMatchPatch();
 
     let numCorrect = 0;
