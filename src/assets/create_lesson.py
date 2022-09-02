@@ -4,8 +4,11 @@ from curses import raw
 from pathlib import Path
 import re
 
+# 'TEENER'
+
+# subrayado
 raw_text = """
-Habia una vez un espantapájaros que no ______ (TENER) amigos. Trabajaba en un campo de trigo. No ____ (SER) un trabajo difícil, pero sí, muy solitario. 
+Habia una vez un espantapájaros que no [repuest] ______ (TENER) amigos. Trabajaba en un campo de trigo. No ____ (SER) un trabajo difícil, pero sí, muy solitario. 
 Sin nadie con quien hablar, sus días y sus noches se hacían eternas. Lo único que podía hacer era mirar los pájaros. 
 Cada vez que _______ (PASAR),  él los saludaba. Pero ellos nunca respondían. 
 Un día el espantapájaros _____ (HACER) algo que ____ (ESTAR) prohibido. 
@@ -113,6 +116,10 @@ se convirtió
  en la fábrica más grande de la región. Ahora mis abuelos son muy ricos y están jubilados, pero mi abuela todavía hace conservas muy buenas.
 """
 
+raw_text = """
+Antes yo no ________ (1. sabía/supe) [sabía] nada sobre Colombia, pero el diciembre pasado _________ (2. viajaba/viajé) [viajé] a Bogotá y __________ (3. aprendía/aprendí) [aprendí] mucho sobre el país. Durante mi visita, ____________ (4. conocía/conocí) [conocí] varios centros comerciales, discotecas, universidades y parques inmensos. También _______ (5. podía/pude) [pude] ver las obras originales de Fernando Botero, el famoso pintor de figuras voluminosas. El último día, un guía turístico me _________ (6. decía/dijo) [dijo] que yo no ________ (7. podía/pude) [podía] irme sin ver el Museo del Oro, e inmediatamente ___________ (8. decidía/decidí) [decidí] visitarlo. Afortunadamente, esa misma tarde __________ (9. podíamos/pudimos) [podíamos o pudimos] ir al museo. Allí _________ (10. había/hubo) [había] impresionantes piezas de oro elaboradas por la cultura Muisca, los indígenas de esa región. También __________ (11. descubríamos/descubrimos) [descubrimos] que los muiscas nunca __________ (12. querían/quisieron) [quisieron] revelar el secreto de El Dorado –la legendaria ciudad de oro– a los españoles, quienes no __________ (13. podían/pudieron) [pudieron] encontrarlo jamás. Paradójicamente, los colombianos ___________ (14. daban/dieron) [dieron] el nombre de "El dorado" al aeropuerto internacional de la capital. Gracias a este viaje, _______ (15. descubría/descubrí) [descubrí] que Bogotá es una ciudad muy moderna con una rica historia.
+"""
+
 sentence_pattern = re.compile(r"""
 (?<=[!\.?]) # Look behind assertion because we want to keep the sentence ending
 \s+
@@ -149,10 +156,28 @@ answer_pattern = re.compile(r"""
 
 """, re.VERBOSE | re.DOTALL)
 
+answer_pattern = re.compile(r"""
+_+
+\s*
+\( # opening 
+([^)]*) #hint in ()
+\) # closing
+\s* # some spaces
+\[
+([^]]*)  # some underlines, at least 3
+\]
+
+""", re.VERBOSE | re.DOTALL)
+
+clean_numbers = re.compile(r"""
+\d+\.
+""", re.VERBOSE | re.DOTALL)
+
 import json 
 
 strip_text = raw_text.strip()
 
+strip_text = clean_numbers.sub("", strip_text)
 #strip_text = strip_text.replace("\n", " ")
 
 sentences = sentence_pattern.split(strip_text)
@@ -170,7 +195,7 @@ for sentence in sentences:
     current_answers.append({
       "repuesta": m.group(2),
       "razón": "",
-      "indicio": m.group(1)
+      "indicio": m.group(1).strip()
     })
 
   no_hints = answer_pattern.sub("_____", sentence)

@@ -1,0 +1,111 @@
+{
+    "titulo": "PRETÉRITO IMPERFECTO-INDEFINIDO 4",
+    "description": "Elegir la forma correcta del verbo:",
+    "preguntas": [
+        {
+            "problema": "Antes yo no _____ nada sobre Colombia, pero el diciembre pasado _____ a Bogotá y _____ mucho sobre el país.  ",
+            "repuestas": [
+              {
+                "repuesta": "sabía",
+                "razón": "",
+                "indicio": "sabía/supe"
+              },
+              {
+                "repuesta": "viajé",
+                "razón": "",
+                "indicio": "viajaba/viajé"
+              },
+              {
+                "repuesta": "aprendí",
+                "razón": "",
+                "indicio": "aprendía/aprendí"
+              }
+            ]
+          },
+          {
+            "problema": "Durante mi visita, _____ varios centros comerciales, discotecas, universidades y parques inmensos.  También _____ ver las obras originales de Fernando Botero, el famoso pintor de figuras voluminosas.  ",
+            "repuestas": [
+              {
+                "repuesta": "conocí",
+                "razón": "",
+                "indicio": "conocía/conocí"
+              },
+              {
+                "repuesta": "pude",
+                "razón": "",
+                "indicio": "podía/pude"
+              }
+            ]
+          },
+          {
+            "problema": "El último día, un guía turístico me _____ que yo no _____ irme sin ver el Museo del Oro, e inmediatamente _____ visitarlo.  ",
+            "repuestas": [
+              {
+                "repuesta": "dijo",
+                "razón": "",
+                "indicio": "decía/dijo"
+              },
+              {
+                "repuesta": "podía",
+                "razón": "",
+                "indicio": "podía/pude"
+              },
+              {
+                "repuesta": "decidí",
+                "razón": "",
+                "indicio": "decidía/decidí"
+              }
+            ]
+          },
+          {
+            "problema": "Afortunadamente, esa misma tarde _____ ir al museo.  Allí _____ impresionantes piezas de oro elaboradas por la cultura Muisca, los indígenas de esa región.  ",
+            "repuestas": [
+              {
+                "repuesta": "pudimos",
+                "razón": "",
+                "indicio": "podíamos/pudimos"
+              },
+              {
+                "repuesta": "había",
+                "razón": "",
+                "indicio": "había/hubo"
+              }
+            ]
+          },
+          {
+            "problema": "También _____ que los muiscas nunca _____ revelar el secreto de El Dorado –la legendaria ciudad de oro– a los españoles, quienes no _____ encontrarlo jamás.  ",
+            "repuestas": [
+              {
+                "repuesta": "descubrimos",
+                "razón": "",
+                "indicio": "descubríamos/descubrimos"
+              },
+              {
+                "repuesta": "quisieron",
+                "razón": "",
+                "indicio": "querían/quisieron"
+              },
+              {
+                "repuesta": "pudieron",
+                "razón": "",
+                "indicio": "podían/pudieron"
+              }
+            ]
+          },
+          {
+            "problema": "Paradójicamente, los colombianos _____ el nombre de \"El dorado\" al aeropuerto internacional de la capital.  Gracias a este viaje, _____ que Bogotá es una ciudad muy moderna con una rica historia.  ",
+            "repuestas": [
+              {
+                "repuesta": "dieron",
+                "razón": "",
+                "indicio": "daban/dieron"
+              },
+              {
+                "repuesta": "descubrí",
+                "razón": "",
+                "indicio": "descubría/descubrí"
+              }
+            ]
+          }
+    ]
+}
