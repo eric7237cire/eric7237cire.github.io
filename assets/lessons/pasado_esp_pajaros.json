@@ -20,7 +20,7 @@
       "problema": "Sin nadie con quien hablar, sus días y sus noches se hacían eternas.  Lo único que podía hacer era mirar los pájaros.  Cada vez que _____,  él los saludaba.  Pero ellos nunca respondían.  Un día el espantapájaros _____ algo que _____ prohibido.  ",
       "repuestas": [
         {
-          "repuesta": "Pasaba",
+          "repuesta": "Pasaban",
           "razón": "regularidad de una acción en el pasado",
           "indicio": "PASAR"
         },
@@ -30,9 +30,9 @@
           "indicio": "HACER"
         },
         {
-          "repuesta": "era",
+          "repuesta": "estaba",
           "razón": "Una descripción",
-          "indicio": "SER"
+          "indicio": "ESTAR"
         }
       ]
     },
@@ -40,8 +40,8 @@
       "problema": "Les ofreció unas semillas.  Pero aun así, ellos no _____ saber nada.  El espantapájaros se preguntaba por qué nadie quería ser su amigo.  Así pasó el tiempo hasta que una noche fría _____ a sus pies un cuervo ciego.  ",
       "repuestas": [
         {
-          "repuesta": "Quisimos",
-          "razón": "",
+          "repuesta": "quisieron",
+          "razón": "Conectado a un día el espantapájaros hizo algo",
           "indicio": "QUERER"
         },
         {
@@ -61,7 +61,7 @@
         },
         {
           "repuesta": "querían",
-          "razón": "Una descripción",
+          "razón": "Acción habitual",
           "indicio": "QUERER"
         },
         {
@@ -75,13 +75,13 @@
       "problema": "Unos monstruos.  Ofendido, el espantapájaros le explicó que él no era malo a pesar de ser un espantapájaros.  Una vez más, el espantapájaros _____ sin amigos.  Esa misma noche decidió cambiar su vida.  Despertó a su amo y le dijo que quería otro oficio, que ya no _____ asustar más a los pájaros.  ",
       "repuestas": [
         {
-          "repuesta": "Se quedaba",
-          "razón": "Una descripción",
+          "repuesta": "Se quedó",
+          "razón": "Una vez más...",
           "indicio": "QUEDARSE"
         },
         {
           "repuesta": "quería",
-          "razón": "",
+          "razón": "Discurso indirecto",
           "indicio": "QUERER"
         }
       ]
@@ -90,12 +90,12 @@
       "problema": "Aterrorizado, el amo despertó a todos los vecinos.  Les contó que su espantapájaros _____ vida y que esto sólo podía ser obra del diablo.  Cerca del molino estaba el cuervo ciego.  Sus compañeros le explicaron que los vecinos de la aldea _____ quemando un molino donde se intentaba esconder un espantapájaros con una bufanda muy larga.  ",
       "repuestas": [
         {
-          "repuesta": "cobró",
-          "razón": "",
+          "repuesta": "había cobrado",
+          "razón": "Preterito pluscuamperfecto; acciones anterior de otros acionnes",
           "indicio": "COBRAR"
         },
         {
-          "repuesta": "estaba",
+          "repuesta": "estaban",
           "razón": "Una descripción",
           "indicio": "ESTAR"
         }
@@ -110,8 +110,8 @@
           "indicio": "SER"
         },
         {
-          "repuesta": "salvó",
-          "razón": "",
+          "repuesta": "había salvado",
+          "razón": "Pluscuamperfecto",
           "indicio": "SALVAR"
         }
       ]
@@ -121,7 +121,7 @@
       "repuestas": [
         {
           "repuesta": "quisieron",
-          "razón": "",
+          "razón": "Acción puntual",
           "indicio": "QUERER"
         },
         {
@@ -132,7 +132,7 @@
       ]
     },
     {
-      "problema": "Los cuervos esperaron hasta el amanecer y cuando no había llamas, se acercaron a los restos del molino, recogieron las cenizas del espantapájaros, y _____ alto, muy alto.  Y desde lo más alto, esparcieron las cenizas por el aire.  El viento llevó las cenizas por toda la comarca.  Las cenizas volaron junto con todos los pájaros y de esta manera el espantapájaros nunca volvió a estar solo, porque sus cenizas, ahora, volaban con sus nuevos amigos.  Y en recuerdo de la trágica muerte del espantapájaros, el cuervo ciego y todos sus compañeros _____ vestir de luto.  ",
+      "problema": "Los cuervos esperaron hasta el amanecer y cuando no había llamas, se acercaron a los restos del molino, recogieron las cenizas del espantapájaros, y _____ alto, muy alto.  Y desde lo más alto, esparcieron las cenizas por el aire.  El viento llevó las cenizas por toda la comarca.  Las cenizas volaron junto con todos los pájaros y de esta manera el espantapájaros nunca volvió a estar solo, porque sus cenizas, ahora, volaban con sus nuevos amigos.  Y en recuerdo de la trágica muerte del espantapájaros, el cuervo ciego y todos sus compañeros _____ vestir de luto. Y por eso, desde entonces, en memoria del espantapájaros, todos los cuervos son negros. ",
       "repuestas": [
         {
           "repuesta": "volaron",
@@ -145,10 +145,6 @@
           "indicio": "DECIDIR"
         }
       ]
-    },
-    {
-      "problema": "Y por eso, desde entonces, en memoria del espantapájaros, todos los cuervos son negros.  ",
-      "repuestas": []
     }
   ]
 }

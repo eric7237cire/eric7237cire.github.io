@@ -1,8 +1,7 @@
 {
   "titulo": "LOS EGIPCIOS",
   "description": "Ejercicio para practicar el pretérito imperfecto de indicativo.  Completa con los verbos en pretérito imperfecto.",
-  "preguntas": [
-    [
+  "preguntas": [    
       {
         "problema": "Esta civilización nació a lo largo del río Nilo.  El Nilo _____ su fuente de vida.  Sus crecidas _____ las tierras de cultivo de sus riberas; también _____ , _____ aves en las marismas y _____ el Nilo como vía principal de comunicación y de transporte.  ",
         "repuestas": [
@@ -249,7 +248,7 @@
         ]
       }
     ]
-  ]
+  
 }
 
           
