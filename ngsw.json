@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1662265110678,
+  "timestamp": 1662265470327,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -84,7 +84,7 @@
     "/assets/lessons/sources.md": "c334e597260d66519994b238df0735685c042fab",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/index.html": "f1b43eb75770af363a5eeecaa56b4c8f99b76291",
-    "/main.js": "085bb8195c955bcbf5d0a47252ff176896ad59ef",
+    "/main.js": "19a538bf88b28154bca838cb1c0f10d8f2de6ce2",
     "/polyfills.js": "29ad649d991b22be19c314955abdb941f2b7f3e7",
     "/runtime.js": "ed85a4346b574ebffaa26eadedec6164318e83d9",
     "/styles.css": "508fd0b6d6a59f0f6bfa217c3deda278b188db91"
