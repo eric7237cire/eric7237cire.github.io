@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1662105576344,
+  "timestamp": 1662265110678,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -37,6 +37,7 @@
         "/assets/icons/icon-512x512.png",
         "/assets/icons/icon-72x72.png",
         "/assets/icons/icon-96x96.png",
+        "/assets/lessons/condicional_1.json",
         "/assets/lessons/english_1.json",
         "/assets/lessons/imp_egipcios.json",
         "/assets/lessons/imperfecto_indefinido.json",
@@ -57,7 +58,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/assets/create_lesson.py": "0033f4dfd0624a6ecb9e5fe18bb929474f9024d4",
+    "/assets/create_lesson.py": "fecd2d2a7690c3686ea1099727383cc3d2f23bee",
     "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -66,6 +67,7 @@
     "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/lessons/condicional_1.json": "45fa4d80d9f94dcbc7bc1f32265b0a009aae0754",
     "/assets/lessons/english_1.json": "495cd941a9e1f8131ba6129fb6e1a952370731fd",
     "/assets/lessons/imp_egipcios.json": "c26b888a166c0ffa1415a01ea07a7e820a1cede5",
     "/assets/lessons/imperfecto_indefinido.json": "d85838fa4f6b752e557979a34b5c732a7affb3c6",
@@ -82,7 +84,7 @@
     "/assets/lessons/sources.md": "c334e597260d66519994b238df0735685c042fab",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/index.html": "f1b43eb75770af363a5eeecaa56b4c8f99b76291",
-    "/main.js": "ff6d63f44676f2eb3af24983be8dacae03ca4fb9",
+    "/main.js": "085bb8195c955bcbf5d0a47252ff176896ad59ef",
     "/polyfills.js": "29ad649d991b22be19c314955abdb941f2b7f3e7",
     "/runtime.js": "ed85a4346b574ebffaa26eadedec6164318e83d9",
     "/styles.css": "508fd0b6d6a59f0f6bfa217c3deda278b188db91"
