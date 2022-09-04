@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {StorageService} from "../services/storage.service";
 import {environment} from "../../environments/environment";
 import {SwUpdate, VersionReadyEvent} from "@angular/service-worker";
-import {filter, map} from "rxjs";
+import {filter, map, tap} from "rxjs";
 
 @Component({
   selector: 'app-spanish-root',
@@ -32,6 +32,7 @@ export class SpanishRootComponent implements OnInit {
     if (this.swUpdate.isEnabled) {
 
       this.swUpdate.versionUpdates.pipe(
+        tap(evt => console.log("Recieved event sw update", evt)),
         filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
         map(evt => ({
           type: 'UPDATE_AVAILABLE',
@@ -40,6 +41,8 @@ export class SpanishRootComponent implements OnInit {
         }))).subscribe(() => {
         window.location.reload();
       });
+    } else {
+      console.log("No sw update enabled");
     }
   }
 
