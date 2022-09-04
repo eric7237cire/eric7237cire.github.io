@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # python3 src/assets/create_lesson.py
+# "I:\python\python.exe" I:\eric7237cire.github.io\src\assets\create_lesson.py
 import sys
 from pathlib import Path
 import re
@@ -16,6 +17,32 @@ Cuando Kal-El ______ (fue, era) [era] joven él _______ (vivió, vivía) [vivía
 Los dos amigos nuevos de Clark Kent, Lois Lane y Jimmy Olsen, _________ (estuvieron, estaban) [estaban] preocupados con frecuencia porque generalmente ellos no ______ (vieron, veían) [veían] a Clark Kent en la escena de un crimen o accidente importante. Un día por ejemplo, mientras Clark ______ (escribió, escribía) [escribía] un artículo para el Daily Planet y también __________ (escuchó, escuchaba) [escuchaba] la radio, _________ (oyó, oía) [oyó] algo terrible. ¡Una crisis en el aeropuerto! ¡Su enemigo, Lex Luther, ________ (fue, iba) [iba] a usar un avión con una bomba llena de ántrax y cólera para matar a millones de personas! Al oír esto, Clark Kent _______ (salió, salía) [salió] inmediatamente de su oficina, _________ (entró, entraba) [entró] en una cabina telefónica, y se ______ (puso , ponía) [puso] una capa roja. Entonces Superhombre se _______ (fue, iba) [fue] rápidamente por el cielo y ________ (destruyó, destruía) [destruyó] la bomba con su visión X--- ¡pero Lex Luther se ________ (escapó, escapaba) [escapó] otra vez.
 
      """
+
+raw_text = """
+1. ¿Te  (gustar) __________ [gustaría] cambiar de trabajo o estás contento con el que tenés?
+2. Nunca  (yo, perdonar) ________________ [perdonaría] una infidelidad.
+3. ¿ (vos, querer)_____________ [querrías] cerrar la ventana, por favor? Hace un poco de frío.
+4.  (ustedes, tener)______________ [tendrían] que llegar antes que nosotros.
+5. Me dijo que el lunes  (ella, salir) _______________ [saldría] más tarde.
+6. Le prometí al médico que no  (fumar) ____________ [fumaría] tanto.
+7. Creí que  (haber)_____________ [habría] más gente en la fiesta.
+8. No pensaba que el viaje  (valer) _______________ [valdría] tanto la pena.
+9. ¡Nos  (comer) ______________ [comeríamos] una paella ahora mismo!
+10. Laura y Sergio me dijeron que  (venir) __________ [vendrían] al pueblo este verano.
+11. Si te soy sincera  (preferir) ____________ [preferiría] tener el pelo completamente liso.
+12. Yo en tu lugar no lo  (hacer) ___________ [haría] así.
+13.  (vos, deber)______________ [deberías] ir al médico lo antes posible.
+14. No sé qué te parece pero  (poder)___________ [podríamos] irnos de vacaciones en mayo.
+15. Cuando apareció,  (ser)____________ [serían] las tres de la mañana.
+16. ¿Les  (gustar) ___________ [gustaría] ir a la playa el domingo?
+17. A Laura y Alberto les  (encantar)___________ [encantaría] vivir en un pueblo de montaña.
+18. De esa manera  (nosotros, ahorrar) ___________ [ahorraríamos] más dinero.
+19. Yo que ustedes  (apagar) _________ [apagaría] el celular.
+20. ¡Me dijeron que no  (ustedes, decir)__________ [dirían] nada!
+21. Tu marido y tú os  (sentir) ___________ [sentiríais]como en casa.
+22. ¿ (usted, saber) ___________ [sabría] cómo llegar al centro de la ciudad?
+23. Siempre dijimos que (nosotras, aprender)_________ [aprenderíamos] juntas.
+"""     
 
 sentence_pattern = re.compile(r"""
 (?<=[!\.?]) # Look behind assertion because we want to keep the sentence ending
@@ -45,12 +72,12 @@ hint_pattern = re.compile(r"""
 
 
 answer_pattern = re.compile(r"""
-_+
-\s*
 \( # opening 
 ([^)]*) #hint in ()
 \) # closing
 \s* # some spaces
+_+
+\s*
 \[
 ([^]]*)  # some underlines, at least 3
 \]

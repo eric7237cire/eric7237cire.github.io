@@ -1,0 +1,237 @@
+{
+    "titulo": "PRETÉRITO IMPERFECTO-INDEFINIDO 2",
+    "description": "Los principales usos de imperfecto son:  a.    Acciones contempladas como durativas en el pasado.   “Cuando era pequeño, siempre desayunaba leche con cereales”   b.    Acciones repetitivas en el pasado.  “Antes solía ir al gimnasio dos días por semana; iba los martes y jueves”   c.    Descripciones en el pasado.",
+    "preguntas": 
+        [
+            {
+              "problema": "¿Te  _____ cambiar de trabajo o estás contento con el que tenés?",
+              "repuestas": [
+                {
+                  "repuesta": "gustaría",
+                  "razón": "",
+                  "indicio": "gustar"
+                }
+              ]
+            },
+            {
+              "problema": "Nunca  _____ una infidelidad.",
+              "repuestas": [
+                {
+                  "repuesta": "perdonaría",
+                  "razón": "",
+                  "indicio": "yo, perdonar"
+                }
+              ]
+            },
+            {
+              "problema": "¿ _____ cerrar la ventana, por favor?",
+              "repuestas": [
+                {
+                  "repuesta": "querrías",
+                  "razón": "",
+                  "indicio": "vos, querer"
+                }
+              ]
+            },
+            {
+              "problema": "Hace un poco de frío._____ que llegar antes que nosotros.",
+              "repuestas": [
+                {
+                  "repuesta": "tendrían",
+                  "razón": "",
+                  "indicio": "ustedes, tener"
+                }
+              ]
+            },
+            {
+              "problema": "Me dijo que el lunes  _____ más tarde.",
+              "repuestas": [
+                {
+                  "repuesta": "saldría",
+                  "razón": "",
+                  "indicio": "ella, salir"
+                }
+              ]
+            },
+            {
+              "problema": "Le prometí al médico que no  _____ tanto.",
+              "repuestas": [
+                {
+                  "repuesta": "fumaría",
+                  "razón": "",
+                  "indicio": "fumar"
+                }
+              ]
+            },
+            {
+              "problema": "Creí que  _____ más gente en la fiesta.",
+              "repuestas": [
+                {
+                  "repuesta": "habría",
+                  "razón": "",
+                  "indicio": "haber"
+                }
+              ]
+            },
+            {
+              "problema": "No pensaba que el viaje  _____ tanto la pena.",
+              "repuestas": [
+                {
+                  "repuesta": "valdría",
+                  "razón": "",
+                  "indicio": "valer"
+                }
+              ]
+            },
+            {
+              "problema": "¡Nos  _____ una paella ahora mismo!",
+              "repuestas": [
+                {
+                  "repuesta": "comeríamos",
+                  "razón": "",
+                  "indicio": "comer"
+                }
+              ]
+            },
+            {
+              "problema": "Laura y Sergio me dijeron que  _____ al pueblo este verano.",
+              "repuestas": [
+                {
+                  "repuesta": "vendrían",
+                  "razón": "",
+                  "indicio": "venir"
+                }
+              ]
+            },
+            {
+              "problema": "Si te soy sincera  _____ tener el pelo completamente liso.",
+              "repuestas": [
+                {
+                  "repuesta": "preferiría",
+                  "razón": "",
+                  "indicio": "preferir"
+                }
+              ]
+            },
+            {
+              "problema": "Yo en tu lugar no lo  _____ así.",
+              "repuestas": [
+                {
+                  "repuesta": "haría",
+                  "razón": "",
+                  "indicio": "hacer"
+                }
+              ]
+            },
+            {
+              "problema": "_____ ir al médico lo antes posible.",
+              "repuestas": [
+                {
+                  "repuesta": "deberías",
+                  "razón": "",
+                  "indicio": "vos, deber"
+                }
+              ]
+            },
+            {
+              "problema": "No sé qué te parece pero  _____ irnos de vacaciones en mayo.",
+              "repuestas": [
+                {
+                  "repuesta": "podríamos",
+                  "razón": "",
+                  "indicio": "poder"
+                }
+              ]
+            },
+            {
+              "problema": "Cuando apareció,  _____ las tres de la mañana.",
+              "repuestas": [
+                {
+                  "repuesta": "serían",
+                  "razón": "",
+                  "indicio": "ser"
+                }
+              ]
+            },
+            {
+              "problema": "¿Les  _____ ir a la playa el domingo?",
+              "repuestas": [
+                {
+                  "repuesta": "gustaría",
+                  "razón": "",
+                  "indicio": "gustar"
+                }
+              ]
+            },
+            {
+              "problema": "A Laura y Alberto les  _____ vivir en un pueblo de montaña.",
+              "repuestas": [
+                {
+                  "repuesta": "encantaría",
+                  "razón": "",
+                  "indicio": "encantar"
+                }
+              ]
+            },
+            {
+              "problema": "De esa manera  _____ más dinero.",
+              "repuestas": [
+                {
+                  "repuesta": "ahorraríamos",
+                  "razón": "",
+                  "indicio": "nosotros, ahorrar"
+                }
+              ]
+            },
+            {
+              "problema": "Yo que ustedes  _____ el celular.",
+              "repuestas": [
+                {
+                  "repuesta": "apagaría",
+                  "razón": "",
+                  "indicio": "apagar"
+                }
+              ]
+            },
+            {
+              "problema": "¡Me dijeron que no  _____ nada!",
+              "repuestas": [
+                {
+                  "repuesta": "dirían",
+                  "razón": "",
+                  "indicio": "ustedes, decir"
+                }
+              ]
+            },
+            {
+              "problema": "Tu marido y tú os  _____como en casa.",
+              "repuestas": [
+                {
+                  "repuesta": "sentiríais",
+                  "razón": "",
+                  "indicio": "sentir"
+                }
+              ]
+            },
+            {
+              "problema": "¿ _____ cómo llegar al centro de la ciudad?",
+              "repuestas": [
+                {
+                  "repuesta": "sabría",
+                  "razón": "",
+                  "indicio": "usted, saber"
+                }
+              ]
+            },
+            {
+              "problema": "Siempre dijimos que _____ juntas.",
+              "repuestas": [
+                {
+                  "repuesta": "aprenderíamos",
+                  "razón": "",
+                  "indicio": "nosotras, aprender"
+                }
+              ]
+            }
+    ]
+}
