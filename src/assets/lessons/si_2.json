@@ -168,7 +168,37 @@
             "indicio": "ser"
           }
         ]
+      },
+      {
+        "problema": "Ojalá _____ con quién voy a salir en mi cita a ciegas. ",
+        "repuestas": [
+          
+          {
+            "repuesta": "supiera",
+            "razón": "",
+            "indicio": "saber"
+          }
+        ]
+      },
+      {
+        "problema": "Ella te pidió que _____ dos pares de guantes.  Era importante que _____ eso.",
+        "repuestas": [
+          
+          {
+            "repuesta": "trajeras",
+            "razón": "",
+            "indicio": "traer (tú)"
+          },
+          {
+            "repuesta": "decidiéramos",
+            "razón": "",
+            "indicio": "decidir (nosotros)"
+          }
+          
+        ]
+        
       }
+      
 
     ]
 }
