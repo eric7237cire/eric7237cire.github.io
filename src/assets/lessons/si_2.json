@@ -1,0 +1,111 @@
+{
+    "titulo": "Expresiones con si 2",
+    "description": "https://svfspanish.com/oraciones-condicionales-con-si/",
+    "preguntas": [
+      {
+        "problema": "Si + presente de indicativo + presente de indicativo (cuando la consecuencia es en el presente) -- Si _____, no _____ ir al parque",
+        "repuestas": [
+          {
+            "repuesta": "llueve",
+            "razón": "",
+            "indicio": "llovar"
+          },
+          {
+            "repuesta": "podemos",
+            "razón": "",
+            "indicio": "poder"
+          }
+        ]
+      },
+      {
+        "problema": "Si + presente de indicativo + futuro (cuando la consecuencia es en el futuro). -- Si ________ mucho, ______ el examen",
+        "repuestas": [
+          {
+            "repuesta": "estudias",
+            "razón": "",
+            "indicio": "estudiar"
+          },
+          {
+            "repuesta": "aprobarás",
+            "razón": "",
+            "indicio": "aprobar"
+          }
+        ]
+      },
+      {
+        "problema": "Si+ presente de indicativo + imperativo (cuando la consecuencia es un consejo o una sugerencia).  Si ____ al supermercado, _____ manzanas",
+        "repuestas": [
+          {
+            "repuesta": "vas",
+            "razón": "",
+            "indicio": "ir"
+          },
+          {
+            "repuesta": "compra",
+            "razón": "",
+            "indicio": "comprar"
+          }
+        ]
+      },
+      {
+        "problema": "Si+ tiempo del pasado + tiempo del pasado (cuando la consecuencia es en el pasado).  Si ____ a la fiesta, yo no lo ___",
+        "repuestas": [
+          {
+            "repuesta": "vino",
+            "razón": "",
+            "indicio": "venir (él)"
+          },
+          {
+            "repuesta": "vi",
+            "razón": "",
+            "indicio": "ver"
+          }
+        ]
+      },
+      {
+        "problema": "Si+ tiempo del pasado + presente (cuando la consecuencia es en el presente).  Si ____ los deberes, ____ ir a jugar. ",
+        "repuestas": [
+          {
+            "repuesta": "has hecho",
+            "razón": "",
+            "indicio": "hacer (tú)"
+          },
+          {
+            "repuesta": "puedes",
+            "razón": "",
+            "indicio": "poder"
+          }
+        ]
+      },
+      {
+        "problema": "Si + tiempo del pasado + futuro (cuando la consecuencia es en el futuro).  Si _____ el vestido rojo, su hermana ______ porque es suyo ",
+        "repuestas": [
+          {
+            "repuesta": "llevaba",
+            "razón": "",
+            "indicio": "llevar"
+          },
+          {
+            "repuesta": "se enfadará",
+            "razón": "",
+            "indicio": "enfadarse"
+          }
+        ]
+      },
+      {
+        "problema": "Si+ tiempo del pasado + imperativo (consejo o sugerencia).  Si _______, no ____ más dulces. ",
+        "repuestas": [
+          {
+            "repuesta": "has engordado",
+            "razón": "",
+            "indicio": "engordar"
+          },
+          {
+            "repuesta": "comas",
+            "razón": "",
+            "indicio": "comer"
+          }
+        ]
+      }
+    ]
+}
