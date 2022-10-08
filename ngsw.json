@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1665243812476,
+  "timestamp": 1665248748772,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -82,11 +82,11 @@
     "/assets/lessons/por_para.json": "4f84ad57da0aac3330dff209858f9aeb35d954b0",
     "/assets/lessons/por_para_2.json": "51b0068dbadb44e1bcc4e15ba6e0350765ea7c47",
     "/assets/lessons/si_1.json": "485f0473cf656bd289d1a48166779b39218aba93",
-    "/assets/lessons/si_2.json": "d2b04d15f360f46000b61dac59d798e72bbd4a7b",
+    "/assets/lessons/si_2.json": "bd04d7997b1459b6c12978f080fd4482e2b09b31",
     "/assets/lessons/sources.md": "c334e597260d66519994b238df0735685c042fab",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/index.html": "4ba52edd9c0972a8a15034dc810bf21873385215",
-    "/main.js": "c376bef8817e09ab31b31b31f099b7aa71267d71",
+    "/main.js": "2a93b783c23624bdd43aa5e1a2b6827d7b2b356e",
     "/polyfills.js": "29ad649d991b22be19c314955abdb941f2b7f3e7",
     "/runtime.js": "ed85a4346b574ebffaa26eadedec6164318e83d9",
     "/styles.css": "37dbaeec2343e9451c4163ab93abef3bcb2e8692"
