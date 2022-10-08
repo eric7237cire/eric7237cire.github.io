@@ -23,3 +23,9 @@ a {
   display: block;
   width: auto;
 }
+
+
+.drop-down-links a {
+  display: block;
+  margin-left: 5px;
+}
