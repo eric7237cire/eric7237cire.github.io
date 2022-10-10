@@ -1,0 +1,24 @@
+{
+    words: [
+        {
+            es: ["tozudo", "terco"]
+            en: "stubborn"
+        },
+        {
+            es: "agujetas"
+            en: "muscle stiff"
+        },
+        {
+            es: "LIBRE ALBEDRIO"
+        },
+        {
+            es: ["estirar", "elongar"]
+        },
+        {
+            es: "DESALENTADOR"
+        },
+        {
+            es: "maduro"
+        }
+    ]
+}
